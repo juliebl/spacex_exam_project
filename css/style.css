@@ -1,0 +1,140 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+    background-color: black;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {}
+
+.top-bar,
+.header-content {
+    margin: 0 15%;
+}
+
+.header {
+    margin: 0;
+    background-color: rgb(39, 37, 44);
+    background: url(../img/headerbkg.jpg);
+    min-height: 100vh;
+    max-width: 100%;
+}
+
+.top-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+
+}
+
+.logo {
+    margin-right: auto;
+}
+
+h1 {
+    font-size: 5.5rem;
+    font-weight: 400;
+    margin: 14px 0;
+}
+
+.top-nav {}
+
+.top-nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 45px 0 0 0;
+    margin: 0;
+
+}
+
+.top-nav ul li {
+    margin: 0 25px;
+}
+
+.top-nav ul li a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.top-nav ul li a:hover {
+    border-bottom: 2px solid rgb(255, 255, 255);
+    transition: 0.25s;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 200px;
+    height: 500px;
+}
+
+.header-content>div {
+    width: 50%;
+}
+
+.header-content-main-text {
+    align-self: flex-start;
+}
+
+.header-content-main-text p {
+    font-size: 1.4rem;
+    line-height: 2;
+    margin: 0 0 40px 0;
+}
+
+
+
+.button {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    border: 2px solid rgb(255, 255, 255);
+
+}
+
+.button:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    transition: 0.2s;
+}
+
+.button:active {
+    background-color: rgb(128, 128, 128);
+    border: 2px solid rgb(128, 128, 128);
+}
+
+.header-content-countdown {
+    text-align: right;
+    align-self: flex-end;
+}
+
+
+.countdown {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.small-text {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.icon {
+    text-decoration: none;
+}
+
+.header-content-countdown .icon {
+    margin-left: 5px;
+}
