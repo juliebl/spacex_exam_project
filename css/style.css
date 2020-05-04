@@ -2,16 +2,25 @@ html,
 body {
     margin: 0;
     height: 100%;
-    background-color: black;
-    color: white;
+    scroll-behavior: smooth;
     font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1px;
 }
 
-.container {}
 
 .top-bar,
-.header-content {
+.header-content,
+.next-launch {
     margin: 0 15%;
+}
+
+.latest,
+.previous-launches,
+.launch-pads,
+.rockets,
+.spacecrafts,
+.latest-social-media {
+    margin: 250px 15%;
 }
 
 .header {
@@ -20,6 +29,7 @@ body {
     background: url(../img/headerbkg.jpg);
     min-height: 100vh;
     max-width: 100%;
+    color: rgb(255, 255, 255);
 }
 
 .top-bar {
@@ -27,7 +37,6 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-
 }
 
 .logo {
@@ -40,7 +49,6 @@ h1 {
     margin: 14px 0;
 }
 
-.top-nav {}
 
 .top-nav ul {
     display: flex;
@@ -48,7 +56,6 @@ h1 {
     list-style: none;
     padding: 45px 0 0 0;
     margin: 0;
-
 }
 
 .top-nav ul li {
@@ -58,7 +65,6 @@ h1 {
 .top-nav ul li a {
     color: white;
     text-decoration: none;
-    letter-spacing: 1px;
     text-transform: uppercase;
 }
 
@@ -67,29 +73,32 @@ h1 {
     transition: 0.25s;
 }
 
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
 .header-content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 200px;
-    height: 500px;
+    align-items: center;
+    min-height: 600px;
 }
 
 .header-content>div {
     width: 50%;
 }
 
-.header-content-main-text {
-    align-self: flex-start;
-}
+
 
 .header-content-main-text p {
     font-size: 1.4rem;
     line-height: 2;
     margin: 0 0 40px 0;
 }
-
-
 
 .button {
     text-decoration: none;
@@ -110,11 +119,27 @@ h1 {
     border: 2px solid rgb(128, 128, 128);
 }
 
-.header-content-countdown {
-    text-align: right;
-    align-self: flex-end;
+.button-dark {
+    background-color: rgb(39, 37, 44);
 }
 
+.button-dark:hover {
+    background-color: rgb(128, 128, 128);
+}
+
+.button:active {
+    background-color: rgb(224, 224, 224);
+}
+
+.button-dark:active {}
+
+.header-content-countdown {
+    text-align: right;
+}
+
+.header a {
+    color: rgb(255, 255, 255);
+}
 
 .countdown {
     font-size: 4rem;
@@ -127,14 +152,114 @@ h1 {
 }
 
 a {
-    color: rgb(255, 255, 255);
     text-decoration: none;
+    color: rgb(0, 0, 0);
 }
 
-.icon {
-    text-decoration: none;
+h1,
+h2,
+h3 {
+    letter-spacing: 3px;
 }
 
-.header-content-countdown .icon {
+h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.center-icon {
+    display: block !important;
+    text-align: center !important;
+    font-size: 3rem;
+    margin: 10px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.center-icon:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.arrow-right {
+    text-decoration: none;
     margin-left: 5px;
+}
+
+/*********** NEXT LAUNCH ***********/
+.next-launch {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 100px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.next-launch-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 50px 0;
+}
+
+.next-launch-info ul li {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.next-launch-info ul li span:nth-child(1) {
+    width: 160px;
+}
+
+.next-launch-info ul li span:nth-child(2) {
+    font-weight: 700;
+}
+
+.next-launch h3 {
+    font-size: 2.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.patch {
+    max-height: 200px;
+}
+
+.date {
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+/*********** LATEST ***********/
+.latest {
+    display: flex;
+}
+
+.latest h4 {
+    margin: 20px 0 10px 0;
+}
+
+.latest .date {
+    font-size: 0.9rem;
+}
+
+.latest>div:first-of-type {
+    margin-right: 100px;
+}
+
+.latest-launch {
+    display: flex;
+    flex-direction: column;
+}
+
+.latest-launch img {
+    margin: 25px 0;
 }
