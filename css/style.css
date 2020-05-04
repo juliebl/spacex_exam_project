@@ -5,8 +5,12 @@ body {
     scroll-behavior: smooth;
     font-family: 'Open Sans', sans-serif;
     letter-spacing: 1px;
+    line-height: 1.5;
 }
 
+.container {
+    margin: 0;
+}
 
 .top-bar,
 .header-content,
@@ -19,6 +23,7 @@ body {
 .launch-pads,
 .rockets,
 .spacecrafts,
+.latest-video,
 .latest-social-media {
     margin: 250px 15%;
 }
@@ -43,11 +48,6 @@ body {
     margin-right: auto;
 }
 
-h1 {
-    font-size: 5.5rem;
-    font-weight: 400;
-    margin: 14px 0;
-}
 
 
 .top-nav ul {
@@ -85,14 +85,12 @@ h1 {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    min-height: 600px;
+    min-height: 500px;
 }
 
 .header-content>div {
     width: 50%;
 }
-
-
 
 .header-content-main-text p {
     font-size: 1.4rem;
@@ -131,8 +129,6 @@ h1 {
     background-color: rgb(224, 224, 224);
 }
 
-.button-dark:active {}
-
 .header-content-countdown {
     text-align: right;
 }
@@ -154,17 +150,26 @@ h1 {
 a {
     text-decoration: none;
     color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+
+
+h1 {
+    font-size: 5.5rem;
+    font-weight: 400;
+    margin: 14px 0;
 }
 
 h1,
 h2,
-h3 {
+.next-launch h3 {
     letter-spacing: 3px;
 }
 
-h4 {
+h3 {
     font-size: 1.2rem;
     font-weight: 700;
+    margin: 20px 0 10px 0;
 }
 
 h2 {
@@ -172,6 +177,19 @@ h2 {
     font-weight: 400;
     text-transform: uppercase;
     margin: 0;
+}
+
+.news-item p:last-of-type::after,
+.previous-launches-card p:last-of-type::after {
+    content: "...";
+}
+
+img {
+    margin: 25px 0;
+}
+
+.center {
+    text-align: center;
 }
 
 .center-icon {
@@ -241,10 +259,7 @@ h2 {
 /*********** LATEST ***********/
 .latest {
     display: flex;
-}
 
-.latest h4 {
-    margin: 20px 0 10px 0;
 }
 
 .latest .date {
@@ -260,6 +275,167 @@ h2 {
     flex-direction: column;
 }
 
-.latest-launch img {
-    margin: 25px 0;
+
+.news-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 60px;
+}
+
+.news-item p {
+    margin: 10px 0;
+}
+
+
+
+/*********** TRIPLE CARDS SECTIONS ***********/
+.triple-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.triple-card,
+.triple-card img {
+    width: 400px;
+}
+
+.triple-card img {
+    margin-bottom: 0;
+}
+
+/*********** ROCKETS AND SPACECRAFTS ***********/
+.rockets-and-spacecrafts img {
+    width: 600px;
+    height: 370px;
+    margin: 0;
+}
+
+.rockets-and-spacecrafts h2 {
+    font-size: 2.6rem;
+}
+
+.rockets-and-spacecrafts p {
+    line-height: 2;
+}
+
+.rockets,
+.spacecrafts {
+    display: flex;
+    flex-wrap: flex;
+}
+
+.rockets>*:first-of-type,
+.spacecrafts>*:first-of-type {
+    margin-right: 100px;
+}
+
+.rockets-content,
+.spacecrafts-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.spacecrafts {
+    flex-direction: row-reverse;
+}
+
+/*********** LATEST VIDEO ***********/
+.latest-video {
+    text-align: center;
+}
+
+/*********** LATEST SOCIAL MEDIA ***********/
+.latest-social-media {
+    text-align: center;
+}
+
+/*********** FOOTER ***********/
+footer {
+    background-color: rgb(39, 37, 44);
+    color: rgb(255, 255, 255);
+}
+
+footer h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+
+footer a {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+    font-weight: 400;
+}
+
+.footer-links a {
+    font-size: 1rem;
+}
+
+.footer-links a:hover,
+footer a:hover {
+    text-decoration: none;
+}
+
+.footer-links a:active,
+footer a:active {
+    color: rgb(177, 177, 177);
+}
+
+.to-top-icon {
+    text-decoration: none;
+}
+
+.center-icon {
+    padding-top: 10px;
+}
+
+footer ul li {
+    padding: 5px 0;
+}
+
+.footer-links {
+    display: flex;
+    margin: 100px 20%;
+    justify-content: space-evenly;
+}
+
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.social-media-links ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px 20px;
+}
+
+.social-media-links i {
+    font-size: 4rem;
+    margin: 0;
+    padding: 0;
+}
+
+.social-media-links a:hover {
+    color: rgb(177, 177, 177);
+}
+
+.social-media-links a:active {
+    color: rgb(104, 104, 104);
+}
+
+footer hr {
+    width: 30%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+footer p {
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.8rem;
 }
