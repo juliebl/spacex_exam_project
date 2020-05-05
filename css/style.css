@@ -6,7 +6,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     letter-spacing: 1px;
     line-height: 1.5;
-
+    background: url(../img/bkg4.jpg) fixed;
 }
 
 .container {
@@ -19,23 +19,35 @@ body {
     margin: 0 15%;
 }
 
-.latest,
-.previous-launches,
-.rockets,
-.spacecrafts,
-.latest-social-media {
-    margin: 250px 15%;
+
+.previous-launches-and-launch-pads-bkg {
+    padding: 250px 0;
 }
 
-.launch-pads {
-    padding: 250px;
+.launch-pads,
+.latest-social-media {
+    margin: 125px 15% 0 15%;
+}
+
+.latest-social-media {
+    margin-bottom: 125px;
+}
+
+.latest,
+.previous-launches,
+.launch-pads,
+.rockets,
+.spacecrafts {
+    margin: 250px 15%;
+    padding: 125px;
+    background-color: rgba(16, 16, 19, 0.9);
+    color: rgb(255, 255, 255);
 }
 
 .next-launch {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
 }
-
 
 .header {
     margin: 0;
@@ -56,8 +68,6 @@ body {
 .logo {
     margin-right: auto;
 }
-
-
 
 .top-nav ul {
     display: flex;
@@ -159,7 +169,7 @@ body {
 
 a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-weight: 600;
 }
 
@@ -184,7 +194,7 @@ h3 {
 
 h2 {
     font-size: 1.6rem;
-    font-weight: 400;
+    font-weight: 300;
     text-transform: uppercase;
     margin: 0;
 }
@@ -272,7 +282,6 @@ img {
 
 .latest {
     display: flex;
-    background-color: rgb(255, 255, 255);
     padding: 25px;
 
 }
@@ -308,7 +317,12 @@ img {
 
 
 
-/*********** TRIPLE CARDS SECTIONS ***********/
+/*********** TRIPLE CARDS / PREVIOUS LAUNCHES / LAUNCH PADS ***********/
+.previous-launches-and-launch-pads-bkg {
+    background: url(../img/bkg2.jpg) fixed;
+    padding: 25px 0;
+}
+
 .triple-card-container {
     display: flex;
     flex-wrap: wrap;
@@ -318,16 +332,11 @@ img {
 
 .triple-card,
 .triple-card img {
-    width: 400px;
+    width: 350px;
 }
 
 .triple-card img {
     margin-bottom: 0;
-}
-
-.launch-pads-bkg {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
 }
 
 
@@ -353,10 +362,8 @@ img {
 .rockets,
 .spacecrafts {
     display: flex;
-    flex-wrap: flex;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    padding: 125px;
+    flex-wrap: wrap;
+
 }
 
 .rockets>*:first-of-type,
@@ -399,7 +406,7 @@ img {
 
 /*********** FOOTER ***********/
 footer {
-    background-color: rgb(39, 37, 44);
+    background-color: rgba(16, 15, 20, 0.9);
     color: rgb(255, 255, 255);
 }
 
