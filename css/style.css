@@ -229,7 +229,9 @@ img {
     margin-left: 5px;
 }
 
+
 /*********** NEXT LAUNCH ***********/
+
 .next-launch {
     display: flex;
     flex-direction: row;
@@ -362,8 +364,6 @@ img {
 .rockets,
 .spacecrafts {
     display: flex;
-    flex-wrap: wrap;
-
 }
 
 .rockets>*:first-of-type,
@@ -394,8 +394,9 @@ img {
 }
 
 /*********** LATEST SOCIAL MEDIA ***********/
-.latest-social-media {
+.latest-social-media h2 {
     text-align: center;
+    color: rgb(255, 255, 255);
 }
 
 .latest-media-embed {
