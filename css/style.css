@@ -6,56 +6,15 @@ body {
     font-family: 'Open Sans', sans-serif;
     letter-spacing: 1px;
     line-height: 1.5;
-    background: url(../img/bkg4.jpg) fixed;
 }
 
 .container {
     margin: 0;
 }
 
-.top-bar,
-.header-content,
-.next-launch {
+/************ TOP NAVIGATION BAR ************/
+.top-bar {
     margin: 0 15%;
-}
-
-
-.previous-launches-and-launch-pads-bkg {
-    padding: 250px 0;
-}
-
-.launch-pads,
-.latest-social-media {
-    margin: 125px 15% 0 15%;
-}
-
-.latest-social-media {
-    margin-bottom: 125px;
-}
-
-.latest,
-.previous-launches,
-.launch-pads,
-.rockets,
-.spacecrafts {
-    margin: 250px 15%;
-    padding: 125px;
-    background-color: rgba(16, 16, 19, 0.9);
-    color: rgb(255, 255, 255);
-}
-
-.next-launch {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-}
-
-.header {
-    margin: 0;
-    background-color: rgb(39, 37, 44);
-    background: url(../img/headerbkg.jpg);
-    min-height: 100vh;
-    max-width: 100%;
-    color: rgb(255, 255, 255);
 }
 
 .top-bar {
@@ -81,22 +40,18 @@ body {
     margin: 0 25px;
 }
 
-.top-nav ul li a {
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-.top-nav ul li a:hover {
-    border-bottom: 2px solid rgb(255, 255, 255);
-    transition: 0.25s;
-}
-
+/************ HEADER ************/
 .header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
+    margin: 0;
+    background-color: rgb(39, 37, 44);
+    background: url(../img/headerbkg.jpg);
+    min-height: 100vh;
+    max-width: 100%;
+    color: rgb(255, 255, 255);
 }
 
 .header-content {
@@ -105,6 +60,7 @@ body {
     justify-content: space-between;
     align-items: center;
     min-height: 500px;
+    margin: 0 15%;
 }
 
 .header-content>div {
@@ -117,12 +73,17 @@ body {
     margin: 0 0 40px 0;
 }
 
+
+.header-content-countdown {
+    text-align: right;
+}
+
+/************ BUTTONS ************/
 .button {
     text-decoration: none;
     color: rgb(255, 255, 255);
     padding: 10px 15px;
     border: 2px solid rgb(255, 255, 255);
-
 }
 
 .button:hover {
@@ -149,24 +110,7 @@ body {
     background-color: rgb(224, 224, 224);
 }
 
-.header-content-countdown {
-    text-align: right;
-}
-
-.header a {
-    color: rgb(255, 255, 255);
-}
-
-.countdown {
-    font-size: 4rem;
-    margin: 0;
-}
-
-.small-text {
-    margin: 0;
-    font-size: 0.9rem;
-}
-
+/************ TEXT ************/
 a {
     text-decoration: none;
     color: rgb(255, 255, 255);
@@ -181,8 +125,7 @@ h1 {
 }
 
 h1,
-h2,
-.next-launch h3 {
+h2 {
     letter-spacing: 3px;
 }
 
@@ -199,216 +142,34 @@ h2 {
     margin: 0;
 }
 
-.news-item p:last-of-type::after,
-.previous-launches-card p:last-of-type::after {
-    content: "...";
-}
-
-img {
-    margin: 25px 0;
-}
-
-.center {
-    text-align: center;
-}
-
-.center-icon {
-    display: block !important;
-    text-align: center !important;
-    font-size: 3rem;
-    margin: 10px;
-    color: rgba(255, 255, 255, 0.5);
-}
-
-.center-icon:hover {
-    color: rgba(255, 255, 255, 1);
-}
-
-.arrow-right {
-    text-decoration: none;
-    margin-left: 5px;
-}
-
-
-/*********** NEXT LAUNCH ***********/
-
-.next-launch {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px 100px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-}
-
-.next-launch-info ul {
-    list-style: none;
-    padding: 0;
-    margin: 50px 0;
-}
-
-.next-launch-info ul li {
-    display: flex;
-    margin-bottom: 20px;
-}
-
-.next-launch-info ul li span:nth-child(1) {
-    width: 160px;
-}
-
-.next-launch-info ul li span:nth-child(2) {
-    font-weight: 700;
-}
-
-.next-launch h3 {
-    font-size: 2.6rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin: 0;
-}
-
-.patch {
-    max-height: 200px;
-}
-
 .date {
     font-size: 1.3rem;
     margin: 0;
 }
 
-/*********** LATEST ***********/
-.latest-bkg {
-    background: url(../img/bkg.jpg) fixed;
-    padding: 25px 0;
-}
-
-.latest {
-    display: flex;
-    padding: 25px;
-
-}
-
-.latest .date {
+.small-text {
+    margin: 0;
     font-size: 0.9rem;
 }
 
-.latest>div:first-of-type {
-    margin-right: 100px;
+.top-nav ul li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
-.latest-launch {
-    display: flex;
-    flex-direction: column;
+.top-nav ul li a:hover {
+    border-bottom: 2px solid rgb(255, 255, 255);
+    transition: 0.25s;
 }
 
-.latest-launch img {
-    max-width: 100%;
-    /* box-shadow: 0px 0px 20px 5px #913d2eaf; */
+.header a {
+    color: rgb(255, 255, 255);
 }
 
-.news-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 60px;
-
-}
-
-.news-item p {
-    margin: 10px 0;
-}
-
-
-
-/*********** TRIPLE CARDS / PREVIOUS LAUNCHES / LAUNCH PADS ***********/
-.previous-launches-and-launch-pads-bkg {
-    background: url(../img/bkg2.jpg) fixed;
-    padding: 25px 0;
-}
-
-.triple-card-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.triple-card,
-.triple-card img {
-    width: 350px;
-}
-
-.triple-card img {
-    margin-bottom: 0;
-}
-
-
-/*********** ROCKETS AND SPACECRAFTS ***********/
-.rockets-and-spacecrafts-bkg {
-    background: url(../img/bkg3.jpg) fixed;
-    padding: 25px 0;
-}
-
-.rockets-and-spacecrafts img {
-    height: 370px;
+.countdown {
+    font-size: 4rem;
     margin: 0;
-}
-
-.rockets-and-spacecrafts h2 {
-    font-size: 2.6rem;
-}
-
-.rockets-and-spacecrafts p {
-    line-height: 2;
-}
-
-.rockets,
-.spacecrafts {
-    display: flex;
-}
-
-.rockets>*:first-of-type,
-.spacecrafts>*:first-of-type {
-    margin-right: 100px;
-}
-
-.rockets-content,
-.spacecrafts-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.spacecrafts {
-    flex-direction: row-reverse;
-}
-
-/*********** LATEST VIDEO ***********/
-.latest-video {
-    text-align: center;
-}
-
-.latest-video-iframe {
-    width: 100%;
-    height: 100vh;
-}
-
-/*********** LATEST SOCIAL MEDIA ***********/
-.latest-social-media h2 {
-    text-align: center;
-    color: rgb(255, 255, 255);
-}
-
-.latest-media-embed {
-    margin-top: 45px;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-/*********** FOOTER ***********/
-footer {
-    background-color: rgba(16, 15, 20, 0.9);
-    color: rgb(255, 255, 255);
 }
 
 footer h2 {
@@ -437,13 +198,68 @@ footer a:active {
     color: rgb(177, 177, 177);
 }
 
+.social-media-links i {
+    font-size: 4rem;
+    margin: 0;
+    padding: 0;
+}
+
+.social-media-links a:hover {
+    color: rgb(177, 177, 177);
+}
+
+.social-media-links a:active {
+    color: rgb(104, 104, 104);
+}
+
+footer p {
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.8rem;
+}
+
+/************ IMAGES / ICONS ************/
+
+img {
+    margin: 25px 0;
+}
+
+.patch {
+    max-height: 200px;
+}
+
+.center {
+    text-align: center;
+}
+
+.center-icon {
+    display: block !important;
+    text-align: center !important;
+    font-size: 3rem;
+    margin: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    padding-top: 10px;
+}
+
+.center-icon:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
 .to-top-icon {
     text-decoration: none;
 }
 
-.center-icon {
-    padding-top: 10px;
+.arrow-right {
+    text-decoration: none;
+    margin-left: 5px;
 }
+
+/*********** FOOTER ***********/
+footer {
+    background-color: rgba(16, 15, 20, 0.9);
+    color: rgb(255, 255, 255);
+}
+
 
 footer ul li {
     padding: 5px 0;
@@ -467,27 +283,7 @@ footer ul {
     grid-gap: 5px 20px;
 }
 
-.social-media-links i {
-    font-size: 4rem;
-    margin: 0;
-    padding: 0;
-}
-
-.social-media-links a:hover {
-    color: rgb(177, 177, 177);
-}
-
-.social-media-links a:active {
-    color: rgb(104, 104, 104);
-}
-
 footer hr {
     width: 30%;
     border: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-footer p {
-    text-align: center;
-    padding: 20px 10px;
-    font-size: 0.8rem;
 }

@@ -18,9 +18,7 @@ nav {
     display: grid;
     grid-template-columns: 15% 1fr 15%;
     grid-auto-rows: 200px;
-
 }
-
 
 
 header {
@@ -61,7 +59,7 @@ header {
     background-color: peachpuff;
 }
 
-.rocketspace {
+.rocket-spaceship {
     grid-column: 2 / span 1;
     grid-row: 6 / span 1;
     background-color: plum;
@@ -71,7 +69,7 @@ header {
     background-color: powderblue;
 }
 
-.space {
+.spaceship {
     background-color: seagreen;
 }
 
@@ -81,7 +79,7 @@ header {
     background-color: steelblue;
 }
 
-.social {
+.social-media {
     grid-column: 2 / span 1;
     grid-row: 8 / span 1;
     background-color: thistle;
