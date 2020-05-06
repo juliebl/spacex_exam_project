@@ -159,9 +159,6 @@ footer p {
 }
 
 /************ IMAGES / ICONS ************/
-img {
-    margin: 25px 0;
-}
 
 .patch {
     max-height: 200px;
@@ -195,26 +192,31 @@ img {
 
 /************ TOP NAVIGATION BAR ************/
 .top-bar {
-    margin: 0 15%;
-}
-
-.top-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 1);
+    z-index: 5;
+    box-shadow: 0 4px 40px 0 rgba(239, 228, 255, 0.2), 0 4px 60px 0 rgba(255, 255, 255, 0.1);
 }
 
 .logo {
-    margin-right: auto;
+    margin-left: 15%;
+}
+
+.top-nav {
+    margin-right: 15%;
+    margin-left: auto;
 }
 
 .top-nav ul {
     display: flex;
     flex-direction: row;
     list-style: none;
-    padding: 45px 0 0 0;
-    margin: 0;
+
 }
 
 .top-nav ul li {
