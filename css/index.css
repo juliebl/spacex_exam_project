@@ -3,6 +3,7 @@ body {
     background: url(../img/bkg4.jpg) fixed;
 }
 
+/************ LAYOUT ************/
 .next-launch {
     margin: 0 15%;
 }
@@ -31,8 +32,7 @@ body {
     color: rgb(255, 255, 255);
 }
 
-/************ TEXT ************/
-
+/************ TYPOGRAPHY ************/
 
 .next-launch h3 {
     letter-spacing: 3px;

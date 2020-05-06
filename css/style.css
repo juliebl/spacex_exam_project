@@ -8,8 +8,189 @@ body {
     line-height: 1.5;
 }
 
+/************ LAYOUT ************/
 .container {
     margin: 0;
+}
+
+/************ TYPOGRAPHY ************/
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+
+
+h1 {
+    font-size: 5.5rem;
+    font-weight: 400;
+    margin: 14px 0;
+}
+
+h1,
+h2 {
+    letter-spacing: 3px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 20px 0 10px 0;
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.date {
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.small-text {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.top-nav ul li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.top-nav ul li a:hover {
+    border-bottom: 2px solid rgb(255, 255, 255);
+    transition: 0.25s;
+}
+
+.header a {
+    color: rgb(255, 255, 255);
+}
+
+.header-content-main-text p {
+    font-size: 1.4rem;
+    line-height: 2;
+    margin: 0 0 40px 0;
+}
+
+.countdown {
+    font-size: 4rem;
+    margin: 0;
+}
+
+footer h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+footer a {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+    font-weight: 400;
+}
+
+.footer-links a {
+    font-size: 1rem;
+}
+
+.footer-links a:hover,
+footer a:hover {
+    text-decoration: none;
+}
+
+.footer-links a:active,
+footer a:active {
+    color: rgb(177, 177, 177);
+}
+
+.social-media-links i {
+    font-size: 4rem;
+    margin: 0;
+    padding: 0;
+}
+
+.social-media-links a:hover {
+    color: rgb(177, 177, 177);
+}
+
+.social-media-links a:active {
+    color: rgb(104, 104, 104);
+}
+
+footer p {
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.8rem;
+}
+
+/************ BUTTONS ************/
+.button {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.button:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    transition: 0.2s;
+}
+
+.button:active {
+    background-color: rgb(128, 128, 128);
+    border: 2px solid rgb(128, 128, 128);
+}
+
+.button-dark {
+    background-color: rgb(39, 37, 44);
+}
+
+.button-dark:hover {
+    background-color: rgb(128, 128, 128);
+    color: rgb(255, 255, 255);
+}
+
+.button:active {
+    background-color: rgb(224, 224, 224);
+}
+
+/************ IMAGES / ICONS ************/
+img {
+    margin: 25px 0;
+}
+
+.patch {
+    max-height: 200px;
+}
+
+.center {
+    text-align: center;
+}
+
+.center-icon {
+    display: block !important;
+    text-align: center !important;
+    font-size: 3rem;
+    margin: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    padding-top: 10px;
+}
+
+.center-icon:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.to-top-icon {
+    text-decoration: none;
+}
+
+.arrow-right {
+    text-decoration: none;
+    margin-left: 5px;
 }
 
 /************ TOP NAVIGATION BAR ************/
@@ -67,191 +248,8 @@ body {
     width: 50%;
 }
 
-.header-content-main-text p {
-    font-size: 1.4rem;
-    line-height: 2;
-    margin: 0 0 40px 0;
-}
-
-
 .header-content-countdown {
     text-align: right;
-}
-
-/************ BUTTONS ************/
-.button {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    padding: 10px 15px;
-    border: 2px solid rgb(255, 255, 255);
-}
-
-.button:hover {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    transition: 0.2s;
-}
-
-.button:active {
-    background-color: rgb(128, 128, 128);
-    border: 2px solid rgb(128, 128, 128);
-}
-
-.button-dark {
-    background-color: rgb(39, 37, 44);
-}
-
-.button-dark:hover {
-    background-color: rgb(128, 128, 128);
-    color: rgb(255, 255, 255);
-}
-
-.button:active {
-    background-color: rgb(224, 224, 224);
-}
-
-/************ TEXT ************/
-a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-weight: 600;
-}
-
-
-h1 {
-    font-size: 5.5rem;
-    font-weight: 400;
-    margin: 14px 0;
-}
-
-h1,
-h2 {
-    letter-spacing: 3px;
-}
-
-h3 {
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin: 20px 0 10px 0;
-}
-
-h2 {
-    font-size: 1.6rem;
-    font-weight: 300;
-    text-transform: uppercase;
-    margin: 0;
-}
-
-.date {
-    font-size: 1.3rem;
-    margin: 0;
-}
-
-.small-text {
-    margin: 0;
-    font-size: 0.9rem;
-}
-
-.top-nav ul li a {
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-.top-nav ul li a:hover {
-    border-bottom: 2px solid rgb(255, 255, 255);
-    transition: 0.25s;
-}
-
-.header a {
-    color: rgb(255, 255, 255);
-}
-
-.countdown {
-    font-size: 4rem;
-    margin: 0;
-}
-
-footer h2 {
-    font-size: 1.3rem;
-    font-weight: 600;
-}
-
-
-footer a {
-    color: rgb(255, 255, 255);
-    text-decoration: underline;
-    font-weight: 400;
-}
-
-.footer-links a {
-    font-size: 1rem;
-}
-
-.footer-links a:hover,
-footer a:hover {
-    text-decoration: none;
-}
-
-.footer-links a:active,
-footer a:active {
-    color: rgb(177, 177, 177);
-}
-
-.social-media-links i {
-    font-size: 4rem;
-    margin: 0;
-    padding: 0;
-}
-
-.social-media-links a:hover {
-    color: rgb(177, 177, 177);
-}
-
-.social-media-links a:active {
-    color: rgb(104, 104, 104);
-}
-
-footer p {
-    text-align: center;
-    padding: 20px 10px;
-    font-size: 0.8rem;
-}
-
-/************ IMAGES / ICONS ************/
-
-img {
-    margin: 25px 0;
-}
-
-.patch {
-    max-height: 200px;
-}
-
-.center {
-    text-align: center;
-}
-
-.center-icon {
-    display: block !important;
-    text-align: center !important;
-    font-size: 3rem;
-    margin: 10px;
-    color: rgba(255, 255, 255, 0.5);
-    padding-top: 10px;
-}
-
-.center-icon:hover {
-    color: rgba(255, 255, 255, 1);
-}
-
-.to-top-icon {
-    text-decoration: none;
-}
-
-.arrow-right {
-    text-decoration: none;
-    margin-left: 5px;
 }
 
 /*********** FOOTER ***********/
