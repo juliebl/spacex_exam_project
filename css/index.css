@@ -1,6 +1,7 @@
 html,
 body {
-    background: url(../img/bkg4.jpg) fixed;
+    /* background: url(../img/bkg4.jpg) fixed; */
+    background-color: rgb(19, 21, 29);
 }
 
 .next-launch {
@@ -26,7 +27,7 @@ body {
 .rockets,
 .spacecrafts {
     margin: 250px 15%;
-    padding: 125px;
+    padding: 25px;
     background-color: rgba(16, 16, 19, 0.9);
     color: rgb(255, 255, 255);
 }
@@ -65,7 +66,7 @@ body {
 
 .latest-launch img {
     max-width: 100%;
-    /* box-shadow: 0px 0px 20px 5px #913d2eaf; */
+    margin-top: 20px;
 }
 
 .rockets-and-spacecrafts img {
@@ -132,7 +133,6 @@ body {
 
 .latest {
     display: flex;
-    padding: 25px;
 }
 
 
@@ -145,12 +145,15 @@ body {
     flex-direction: column;
 }
 
+.latest-launch a {
+    margin-top: 20px;
+}
+
 .news-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 60px;
 }
-
 
 /*********** TRIPLE CARDS / PREVIOUS LAUNCHES / LAUNCH PADS ***********/
 .previous-launches-and-launch-pads-bkg {
@@ -163,6 +166,10 @@ body {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.triple-card {
+    flex: 1;
 }
 
 /*********** ROCKETS AND SPACECRAFTS ***********/
@@ -209,4 +216,135 @@ body {
     margin-top: 45px;
     display: flex;
     justify-content: space-evenly;
+}
+
+/*********** RESPONSIVE ***********/
+@media screen and (max-width: 1700px) {
+    .next-launch {
+        margin: 0 10%;
+    }
+
+
+    .launch-pads,
+    .latest-social-media {
+        margin: 125px 10% 0 10%;
+    }
+
+    .latest,
+    .previous-launches,
+    .launch-pads,
+    .rockets,
+    .spacecrafts {
+        margin: 250px 10%;
+
+    }
+
+    .news-container {
+        grid-gap: 40px;
+    }
+
+    .latest>div:first-of-type {
+        margin-right: 50px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .next-launch {
+        margin: 0 5%;
+    }
+
+
+    .launch-pads,
+    .latest-social-media {
+        margin: 125px 5% 0 5%;
+    }
+
+    .latest,
+    .previous-launches,
+    .launch-pads,
+    .rockets,
+    .spacecrafts {
+        margin: 250px 5%;
+
+    }
+
+    .news-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .news-item:nth-last-child(-n+2) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1110px) {
+
+    /** NEXT-LAUNCH **/
+    .next-launch-info ul li {
+        margin-bottom: 10px !important;
+    }
+
+    .next-launch-info ul li {
+        flex-wrap: wrap;
+    }
+
+    .patch {
+        width: 30%;
+    }
+
+    .latest {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .latest>div:first-of-type {
+        margin-right: 0;
+    }
+
+    .latest-news {
+        margin-top: 20px;
+    }
+
+    .news-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .news-item:nth-last-child(-n+2) {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .next-launch-info ul li span:last-of-type {
+        margin-top: 10px;
+    }
+
+    .next-launch {
+        flex-direction: column-reverse !important;
+        padding: 5% !important;
+    }
+
+    .next-launch h2,
+    .next-launch h3,
+    .next-launch .date {
+        text-align: center;
+    }
+
+    .patch {
+        width: 150px;
+        margin: 0 auto 40px auto;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .news-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .news-item:nth-last-child(-n+2) {
+        display: none;
+    }
 }
