@@ -39,6 +39,11 @@ body {
     letter-spacing: 3px;
 }
 
+.next-launch h2,
+.rockets-and-spacecrafts h2 {
+    margin: 0;
+}
+
 .latest-social-media h2 {
     text-align: center;
     color: rgb(255, 255, 255);
@@ -53,11 +58,35 @@ body {
     margin: 10px 0;
 }
 
+h2 {
+    margin-bottom: 20px;
+}
+
+.next-launch h3 {
+    font-size: 2.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.rockets-and-spacecrafts h2 {
+    font-size: 2.6rem;
+}
+
+.rockets-and-spacecrafts p {
+    line-height: 2;
+}
+
+.latest .date {
+    font-size: 0.9rem;
+}
+
 /************ IMAGES ************/
 
 .triple-card,
 .triple-card img {
-    width: 350px;
+    width: 90%;
+    margin: auto;
 }
 
 .triple-card img {
@@ -66,12 +95,11 @@ body {
 
 .latest-launch img {
     max-width: 100%;
-    margin-top: 20px;
 }
 
 .rockets-and-spacecrafts img {
-    height: 370px;
-    margin: 0;
+    max-width: 80%;
+    margin: auto;
 }
 
 /*********** NEXT LAUNCH ***********/
@@ -106,24 +134,7 @@ body {
     font-weight: 700;
 }
 
-.next-launch h3 {
-    font-size: 2.6rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin: 0;
-}
 
-.rockets-and-spacecrafts h2 {
-    font-size: 2.6rem;
-}
-
-.rockets-and-spacecrafts p {
-    line-height: 2;
-}
-
-.latest .date {
-    font-size: 0.9rem;
-}
 
 /*********** LATEST ***********/
 .latest-bkg {
@@ -162,14 +173,12 @@ body {
 }
 
 .triple-card-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .triple-card {
-    flex: 1;
+    margin: auto;
 }
 
 /*********** ROCKETS AND SPACECRAFTS ***********/
@@ -180,13 +189,10 @@ body {
 
 .rockets,
 .spacecrafts {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
-.rockets>*:first-of-type,
-.spacecrafts>*:first-of-type {
-    margin-right: 100px;
-}
 
 .rockets-content,
 .spacecrafts-content {
@@ -235,8 +241,7 @@ body {
     .launch-pads,
     .rockets,
     .spacecrafts {
-        margin: 250px 10%;
-
+        margin: 200px 10%;
     }
 
     .news-container {
@@ -253,7 +258,6 @@ body {
         margin: 0 5%;
     }
 
-
     .launch-pads,
     .latest-social-media {
         margin: 125px 5% 0 5%;
@@ -264,17 +268,12 @@ body {
     .launch-pads,
     .rockets,
     .spacecrafts {
-        margin: 250px 5%;
-
+        margin: 75px 0;
     }
 
     .news-container {
         display: grid;
-        grid-template-columns: 1fr;
-    }
-
-    .news-item:nth-last-child(-n+2) {
-        display: none;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -293,9 +292,9 @@ body {
         width: 30%;
     }
 
-    .latest {
-        flex-direction: column;
-        align-items: center;
+    /** LATEST **/
+    .latest img {
+        width: 90%;
     }
 
     .latest>div:first-of-type {
@@ -307,15 +306,64 @@ body {
     }
 
     .news-container {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     .news-item:nth-last-child(-n+2) {
-        display: block;
+        display: none;
+    }
+
+    /** TRIPLE CARDS **/
+    .triple-card-container {
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+    }
+
+    .triple-card:last-of-type {
+        display: none;
+    }
+
+    .triple-card img {
+        width: 100%;
+    }
+
+    /** ROCKETS / SPACECRAFTS **/
+
+    .rockets-and-spacecrafts img {
+        max-width: 60%;
+        margin-top: 20px;
+    }
+
+    .rockets-content,
+    .spacecrafts-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+
+    .rockets-content *,
+    .spacecrafts-content * {
+        margin: 20px;
+    }
+
+    .rockets,
+    .spacecrafts {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        line-height: 1.5;
     }
 }
 
 @media screen and (max-width: 800px) {
+
+    html,
+    body {
+        line-height: 1.5;
+    }
+
     .next-launch-info ul li span:last-of-type {
         margin-top: 10px;
     }
@@ -331,14 +379,38 @@ body {
         text-align: center;
     }
 
+    .latest {
+        flex-wrap: wrap;
+    }
+
+    .latest h2 {
+        text-align: center;
+    }
+
+    .latest-launch img {
+        width: 100%;
+    }
+
+    .news-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .news-item:nth-last-child(-n+2) {
+        display: block;
+    }
+
     .patch {
         width: 150px;
         margin: 0 auto 40px auto;
         height: auto;
     }
+
+    .rockets-and-spacecrafts img {
+        max-width: 80%;
+    }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     .news-container {
         display: grid;
         grid-template-columns: 1fr;
@@ -346,5 +418,18 @@ body {
 
     .news-item:nth-last-child(-n+2) {
         display: none;
+    }
+
+    .triple-card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .triple-card:nth-last-of-type(-n+2) {
+        display: none;
+    }
+
+    .rockets-and-spacecrafts img {
+        max-width: 100%;
+        margin-top: 20px;
     }
 }
