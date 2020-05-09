@@ -85,12 +85,12 @@ h2 {
 
 .triple-card,
 .triple-card img {
-    width: 90%;
     margin: auto;
 }
 
 .triple-card img {
     margin-bottom: 0;
+    width: 100%;
 }
 
 .latest-launch img {
@@ -175,6 +175,7 @@ h2 {
 .triple-card-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
 }
 
 .triple-card {
@@ -191,6 +192,7 @@ h2 {
 .spacecrafts {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
 }
 
 
