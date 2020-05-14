@@ -1,0 +1,20 @@
+html,
+body {
+    height: 100%;
+}
+
+.header {
+    min-height: 400px;
+    max-height: 600px !important;
+}
+
+.header-content {
+    min-height: 400px;
+}
+
+@media screen and (max-width: 800px) {
+    .header-content {
+        min-height: 500px;
+        justify-content: center;
+    }
+}

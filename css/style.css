@@ -81,21 +81,41 @@ body {
 
 /************ BUTTONS ************/
 .button {
+    display: block;
     text-decoration: none;
     color: rgb(255, 255, 255);
     padding: 10px 15px;
     border: 2px solid rgb(255, 255, 255);
+    max-width: 150px;
+    text-align: center;
 }
 
 .button:hover {
+    transition: all 0.2s;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
-    transition: 0.2s;
+    -moz-transform: translate(0, -4px);
+    -ms-transform: translate(0, -4px);
+    -o-transform: translate(0, -4px);
+    -webkit-transform: translate(0, -4px);
+    transform: translate(0, -4px);
+    -moz-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+
 }
 
 .button:active {
     background-color: rgb(128, 128, 128);
     border: 2px solid rgb(128, 128, 128);
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    -webkit-transform: none;
+    transform: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 .button-dark {
@@ -105,10 +125,12 @@ body {
 .button-dark:hover {
     background-color: rgb(128, 128, 128);
     color: rgb(255, 255, 255);
+    border: 2px solid rgb(128, 128, 128);
 }
 
 .button:active {
     background-color: rgb(224, 224, 224);
+    border: 2px solid rgb(224, 224, 224);
 }
 
 /************ TEXT ************/
@@ -258,7 +280,7 @@ footer p {
 
 /*********** FOOTER ***********/
 footer {
-    background-color: rgba(16, 15, 20, 0.9);
+    background-color: rgb(16, 16, 20);
     color: rgb(255, 255, 255);
 }
 
@@ -277,6 +299,10 @@ footer ul li {
 footer ul {
     list-style: none;
     padding: 0;
+}
+
+footer p {
+    margin-bottom: 0;
 }
 
 .social-media-links ul {

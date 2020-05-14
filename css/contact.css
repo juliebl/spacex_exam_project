@@ -1,0 +1,176 @@
+.header {
+    background: url(../img/bkg3.jpg);
+    background-position: bottom;
+}
+
+main h2,
+main h3 {
+    text-align: center;
+    margin: 0;
+    color: rgb(255, 255, 255);
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-size: 2.6rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+label {
+    font-weight: 600;
+}
+
+main {
+    background: url(../img/bkg4.jpg) fixed;
+    padding: 100px;
+    margin: 0 auto;
+}
+
+#contactForm {
+    background-color: rgba(16, 16, 19, 0.9);
+    padding: 5%;
+    width: 600px;
+    margin: 100px auto;
+    color: rgb(255, 255, 255);
+}
+
+#contactForm>div {
+    margin-bottom: 25px;
+}
+
+.error {
+    display: none;
+    color: rgb(255, 130, 130);
+    font-size: 14px;
+    float: right;
+}
+
+#submitMessage {
+    display: none;
+    margin-left: 40px;
+}
+
+.message-sent-icon {
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+input,
+textarea {
+    width: 100%;
+    min-height: 40px;
+    margin: 10px auto;
+    font: inherit;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+    border-radius: 2px;
+    border: none;
+    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+input::placeholder,
+textarea::placeholder {
+    padding: 1rem;
+}
+
+textarea {
+    height: 250px;
+    resize: none;
+}
+
+
+.form-error {
+    font-size: 0.9rem;
+}
+
+textarea:hover,
+input:hover,
+textarea:focus,
+input:focus {
+    background-color: rgba(255, 255, 255, 1);
+    transition: all 0.2s;
+}
+
+.form-error {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.button {
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    font-weight: 600;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    max-width: 100%;
+    border-radius: 2px;
+    display: inline-block;
+}
+
+.center-icon {
+    margin-top: 0;
+}
+
+@media screen and (max-width: 900px) {
+    main {
+        padding: 100px 0px;
+    }
+
+    #contactForm {
+        width: 70%;
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    #submitMessage {
+        display: block;
+        margin-left: 0;
+        margin-top: 30px;
+    }
+
+    label,
+    .button {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        padding: 100px 0px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    #contactForm {
+        width: 90%;
+    }
+
+    .error {
+        float: none;
+    }
+
+
+
+
+}
