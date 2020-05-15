@@ -6,11 +6,32 @@ body {
     font-family: 'Open Sans', sans-serif;
     letter-spacing: 1px;
     line-height: 1.5;
-
+    background: url(../img/bkg2.jpg) fixed;
 }
 
+/************ LAYOUT ************/
 .container {
     margin: 0;
+}
+
+.single-info-card,
+.single-info-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    padding: 100px;
+    margin: 250px 15%;
+    padding: 50px;
+    background-color: rgba(16, 16, 19, 0.9);
+    color: rgb(255, 255, 255);
+}
+
+
+.info-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 /************ TOP NAVIGATION BAR ************/
@@ -81,12 +102,12 @@ body {
 
 /************ BUTTONS ************/
 .button {
-    display: block;
+    display: inline-block;
     text-decoration: none;
     color: rgb(255, 255, 255);
-    padding: 10px 15px;
+    padding: 10px 25px;
+    margin: 10px 0;
     border: 2px solid rgb(255, 255, 255);
-    max-width: 150px;
     text-align: center;
 }
 
@@ -195,6 +216,18 @@ h2 {
     margin: 0;
 }
 
+.info-cards h2 {
+    margin: 0;
+}
+
+.info-cards h2 {
+    font-size: 2.6rem;
+}
+
+.info-cards p {
+    line-height: 2;
+}
+
 footer h2 {
     font-size: 1.3rem;
     font-weight: 600;
@@ -275,7 +308,11 @@ footer p {
 
 #toggle-menu {
     display: none;
+}
 
+.info-cards img {
+    max-width: 80%;
+    margin: auto auto auto 0;
 }
 
 /*********** FOOTER ***********/
@@ -329,6 +366,10 @@ footer hr {
     .top-nav ul li {
         margin: 0 15px;
     }
+
+    .single-info-cards {
+        margin: 200px 10%;
+    }
 }
 
 @media screen and (max-width: 1300px) {
@@ -346,9 +387,14 @@ footer hr {
         margin: 0 5%;
     }
 
+    .single-info-card {
+        margin: 75px 0;
+    }
+
     .footer-links {
         margin: 100px 10%;
     }
+
 }
 
 @media screen and (max-width: 1110px) {
@@ -390,6 +436,10 @@ footer hr {
         font-size: 2rem;
         margin: 0;
         cursor: pointer;
+    }
+
+    .info-cards img {
+        margin: 0 auto;
     }
 
     /** RESPONSIVE NAVBAR **/
@@ -436,10 +486,36 @@ footer hr {
         background-position: left;
     }
 
+    /** INFO CARDS / ROCKETS AND SPACECRAFTS **/
+
+    .info-cards img {
+        max-width: 60%;
+        margin-top: 20px;
+    }
+
+    .info-card-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+
+    .info-card-content * {
+        margin: 20px;
+    }
+
+    .single-info-card {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        line-height: 1.5;
+    }
 
     .footer-links {
         margin: 50px 5%;
     }
+
 }
 
 @media screen and (max-width: 800px) {
@@ -467,6 +543,10 @@ footer hr {
         font-size: 3.5rem;
     }
 
+    .info-cards img {
+        max-width: 80%;
+    }
+
     .social-media-links i {
         font-size: 2.5rem;
     }
@@ -479,12 +559,21 @@ footer hr {
         font-size: 1.1rem;
     }
 
+    .info-cards img {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
     .footer-links {
         margin: 50px 0;
     }
 
     .social-media-links ul {
         display: block;
+    }
+
+    .info-cards p {
+        margin: auto 0;
     }
 }
 

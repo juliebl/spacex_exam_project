@@ -23,11 +23,9 @@ body {
 
 .latest,
 .previous-launches,
-.launch-pads,
-.rockets,
-.spacecrafts {
+.launch-pads {
     margin: 250px 15%;
-    padding: 25px;
+    padding: 50px;
     background-color: rgba(16, 16, 19, 0.9);
     color: rgb(255, 255, 255);
 }
@@ -39,8 +37,7 @@ body {
     letter-spacing: 3px;
 }
 
-.next-launch h2,
-.rockets-and-spacecrafts h2 {
+.next-launch h2 {
     margin: 0;
 }
 
@@ -59,7 +56,7 @@ body {
 }
 
 h2 {
-    margin-bottom: 20px;
+    margin-bottom: 45px;
 }
 
 .next-launch h3 {
@@ -67,14 +64,6 @@ h2 {
     font-weight: 600;
     text-transform: uppercase;
     margin: 0;
-}
-
-.rockets-and-spacecrafts h2 {
-    font-size: 2.6rem;
-}
-
-.rockets-and-spacecrafts p {
-    line-height: 2;
 }
 
 .latest .date {
@@ -95,11 +84,6 @@ h2 {
 
 .latest-launch img {
     max-width: 100%;
-}
-
-.rockets-and-spacecrafts img {
-    max-width: 80%;
-    margin: auto;
 }
 
 /*********** NEXT LAUNCH ***********/
@@ -188,26 +172,6 @@ h2 {
     padding: 25px 0;
 }
 
-.rockets,
-.spacecrafts {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
-}
-
-
-.rockets-content,
-.spacecrafts-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.spacecrafts {
-    flex-direction: row-reverse;
-}
-
 /*********** LATEST VIDEO ***********/
 .latest-video {
     text-align: center;
@@ -240,9 +204,7 @@ h2 {
 
     .latest,
     .previous-launches,
-    .launch-pads,
-    .rockets,
-    .spacecrafts {
+    .launch-pads {
         margin: 200px 10%;
     }
 
@@ -267,9 +229,7 @@ h2 {
 
     .latest,
     .previous-launches,
-    .launch-pads,
-    .rockets,
-    .spacecrafts {
+    .launch-pads {
         margin: 75px 0;
     }
 
@@ -329,34 +289,7 @@ h2 {
         width: 100%;
     }
 
-    /** ROCKETS / SPACECRAFTS **/
 
-    .rockets-and-spacecrafts img {
-        max-width: 60%;
-        margin-top: 20px;
-    }
-
-    .rockets-content,
-    .spacecrafts-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        text-align: center;
-    }
-
-    .rockets-content *,
-    .spacecrafts-content * {
-        margin: 20px;
-    }
-
-    .rockets,
-    .spacecrafts {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 20px;
-        line-height: 1.5;
-    }
 }
 
 @media screen and (max-width: 800px) {
@@ -407,9 +340,7 @@ h2 {
         height: auto;
     }
 
-    .rockets-and-spacecrafts img {
-        max-width: 80%;
-    }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -430,8 +361,5 @@ h2 {
         display: none;
     }
 
-    .rockets-and-spacecrafts img {
-        max-width: 100%;
-        margin-top: 20px;
-    }
+
 }
