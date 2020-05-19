@@ -2,7 +2,7 @@ main {
 
     min-height: 1000px;
     background-color: white;
-    margin: 250px 15%;
+    margin: 50px 15%;
     padding: 50px;
 }
 
@@ -20,18 +20,46 @@ tr th {
 
 tr {
     border: 4px solid white;
+
 }
 
-.more-info {
-    width: 100%;
-}
 
 tbody tr {
     background-color: rgb(241, 241, 241);
 }
 
-/*********** MORE INFO ***********/
+.loading {
+    animation: loading 1.5s infinite ease-in-out;
+}
 
+@keyframes loading {
+    0% {
+        background-color: rgb(241, 241, 241);
+    }
+
+    50% {
+        background-color: rgb(224, 224, 224);
+    }
+
+    100% {
+        background-color: rgb(241, 241, 241);
+    }
+}
+
+/*********** MORE INFO ***********/
+.hide {
+    display: none;
+}
+
+
+.show-more-info {
+    display: none;
+    width: 100%;
+}
+
+.show-row {
+    display: table-row;
+}
 
 .more-info {
     display: grid;
@@ -42,6 +70,10 @@ tbody tr {
         "close close close close";
     max-width: 100%;
     grid-gap: 20px;
+}
+
+.more-info-row {
+    width: 100%;
 }
 
 .more-info>* {
@@ -88,7 +120,8 @@ tbody tr {
     text-align: center;
     font-size: 2rem;
     margin-bottom: -20px;
-    padding: 0;
+    padding: 0 0 15px 0;
+    cursor: pointer;
 }
 
 .more-info a {
