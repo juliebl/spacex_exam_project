@@ -10,7 +10,6 @@ fetch("https://api.spacexdata.com/v3/launches?order=asc&limit=50&order_by=launch
     });
 
 function showLaunches(launch) {
-    console.dir(launch);
     const container = document.querySelector("tbody");
     let newHTML = "";
 
@@ -95,10 +94,24 @@ function showLaunches(launch) {
 
     const lessInfo = document.querySelectorAll(".less-info");
     for (var i = 0; i < lessInfo.length; i++) {
-        lessInfo[i].addEventListener("click", function () {
-            const showMoreInfo = document.querySelector(".show-more-info");
-            console.log("KLIKK");
-            showMoreInfo.classList.toggle("show-row");
+        lessInfo[i].addEventListener("click", function (event) {
+            const target = event.currentTarget
+            if (target.classList.contains('close-icon')) {
+                const rowParent = target.closest('.show-more-info.show-row')
+                if (rowParent) {
+                    rowParent.classList.toggle("show-row");
+                }
+                return
+            }
+
+            const showMoreInfo = event.currentTarget.nextElementSibling;
+            if (showMoreInfo) {
+                showMoreInfo.classList.toggle("show-row");
+            }
         });
+
     }
+
+
+
 }
