@@ -13,28 +13,51 @@ function showLaunches(launch) {
     const container = document.querySelector("tbody");
     let newHTML = "";
 
-    // Check if there is a flickr image
-    let flickrImage = "";
     for (var i = 0; i < launch.length; i++) {
-        if (launch[i].links.flickr_images.length === 0) {
-            flickrImage = "No image found";
+
+        // Check if there is mission description
+        let missionDetails = "";
+        if (launch[i].details === null) {
+            missionDetails = "No mission description available";
         } else {
-            flickrImage = `${launch[i].links.flickr_images[0]}`;
+            missionDetails = launch[i].details;
         }
+
+        // Check if there is a flickr image
+        let flickrImage = "";
+        if (launch[i].links.flickr_images.length === 0) {
+            flickrImage = `<img src="../img/placeholder-image.png"><a href="https://www.flickr.com/photos/spacex/">See images on Flickr</a>`;
+        } else {
+            flickrImage = `<img src="${launch[i].links.flickr_images[0]}" alt="">
+            <a href="https://www.flickr.com/photos/spacex/">See more on Flickr</a>`;
+        }
+
+        // Emed YouTube link
+        const videoURL = `${launch[i].links.video_link}`;
+        let videoID = videoURL.substr(32);
+        let youtubeLink = ("https://www.youtube.com/embed/" + videoID);
+        let youtubeVideo = "";
+        if (videoURL.length === 0) {
+            youtubeVideo = `<img src="../img/placeholder-image.png"><a href="">See more on youtube</a>`;
+        } else {
+            youtubeVideo = `<iframe src="${youtubeLink}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><a href="">See more on youtube</a>`;
+        }
+
         // Check if there is a wikipedia link
         let wikiLink = "";
-        if (launch[i].links.wikipedia === "") {
-            document.querySelector(".wiki-link").style.display = "none";
+        if (launch[i].links.wikipedia === null) {
+            wikiLink = "";
         } else {
             wikiLink = `${launch[i].links.wikipedia}`;
         }
         // Check if there is a wikipedia link
         let articleLink = "";
-        if (launch[i].links.article_link === "") {
-            document.querySelector(".article-link").style.display = "none";
+        if (launch[i].links.article_link === null) {
+            articleLink = "";
         } else {
             articleLink = `${launch[i].links.article_link}`;
         }
+
         // Shorten/ find date and time
         const longDate = `${launch[i].launch_date_local}`;
         const shortDate = longDate.slice(0, 10);
@@ -54,7 +77,7 @@ function showLaunches(launch) {
                                 <div class="more-info-main">
                                     <h2>Mission name:</h2>
                                     <h3>${launch[i].mission_name}</h3>
-                                    <p>${launch[i].details}</p>
+                                    <p>${missionDetails}</p>
                                     <a href="${articleLink}" class="article-link">Article</a><a href="${wikiLink}" class="wiki-link">Wikipedia</a>
                                 </div>
                                 <img class="patch" src="${launch[i].links.mission_patch}" alt="">
@@ -78,11 +101,8 @@ function showLaunches(launch) {
                                     <p class="date">${shortDate}</p>
                                     <p class="time">${shortTime}</p>
                                 </div>
-                                <div class="img"><img src="${flickrImage}" alt="">
-                                    <a href="">See more on Flickr ></a>
-                                </div>
-                                <div class="video"><img class="video" src="img/placeholder-image.png" alt=""><a
-                                        href="">See more videos on YouTube ></a></div>
+                                <div class="img">${flickrImage}
+                                </div> <div class="video">${youtubeVideo}</div>
                                 <i class="fas fa-chevron-up close-icon less-info"></i>
                             </div>
                         </td>

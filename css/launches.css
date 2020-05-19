@@ -51,7 +51,6 @@ tbody tr {
     display: none;
 }
 
-
 .show-more-info {
     display: none;
     width: 100%;
@@ -76,12 +75,14 @@ tbody tr {
     width: 100%;
 }
 
-.more-info>* {
-    padding: 0 50px;
-}
+
 
 .more-info-main {
     grid-area: main;
+}
+
+.article-link {
+    margin-right: 10px;
 }
 
 .patch {
@@ -102,16 +103,31 @@ tbody tr {
 
 .img {
     grid-area: img;
+    padding: 0;
+}
+
+.img img {
+    max-height: 400px;
 }
 
 .video {
     grid-area: vid;
+    min-width: 100%;
 }
 
 .img img,
-.video img {
+.video {
     max-width: 100%;
-    margin: auto;
+    margin: 0 0 10px 0;
+    padding: 0;
+    display: block;
+}
+
+iframe {
+    display: block;
+    width: 100%;
+    height: 400px;
+    margin: 0 0 10px 0;
 }
 
 .close-icon {
@@ -120,12 +136,22 @@ tbody tr {
     text-align: center;
     font-size: 2rem;
     margin-bottom: -20px;
-    padding: 0 0 15px 0;
+    padding: 30px 0 20px 0;
     cursor: pointer;
 }
 
+
+
 .more-info a {
     color: rgb(0, 0, 0);
+}
+
+.more-info a:hover {
+    text-decoration: underline;
+}
+
+.more-info a:active {
+    font-weight: 700;
 }
 
 .more-info p {
@@ -160,7 +186,7 @@ tbody tr {
     display: inline-block;
     list-style: none;
     padding: 0;
-    margin: 20px 0;
+    margin: 20px 0 0 0;
 }
 
 .more-info-list ul li {
@@ -175,6 +201,8 @@ tbody tr {
 .more-info-list ul li span:nth-child(2) {
     font-weight: 700;
 }
+
+
 
 .date-time {
     margin: auto 0 20px 0;
@@ -204,6 +232,8 @@ tbody tr {
         margin: 125px 5% 0 5%;
     }
 
+
+
 }
 
 @media screen and (max-width: 1100px) {
@@ -214,6 +244,39 @@ tbody tr {
     tr td:nth-child(3),
     tr th:nth-child(3) {
         display: none;
+    }
+
+    h4,
+    .date-time {
+        text-align: center;
+    }
+
+    .img,
+    .video {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .more-info-list div {
+        justify-content: space-evenly;
+    }
+
+    .more-info {
+        grid-template-areas: "main"
+            "date"
+            "patch"
+            "list"
+            "vid"
+            "img"
+            "close";
+        grid-template-columns: 1fr;
+    }
+
+    img.patch {
+        margin: 0 auto;
+        padding: 0;
+        width: auto;
+        max-height: 250px;
     }
 }
 
@@ -233,6 +296,10 @@ tbody tr {
     tr td:nth-child(2),
     tr th:nth-child(2) {
         text-align: right;
+    }
+
+    .more-info-list div {
+        flex-direction: column;
     }
 }
 
