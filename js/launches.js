@@ -93,36 +93,12 @@ function showLaunches(launch) {
     }
     container.innerHTML = newHTML;
 
-
-    const showMoreInfo = document.querySelectorAll(".show-more-info");
-
-    // lessInfo.addEventListener("click", function () {
-    //     if (showMoreInfo.style.display === "none") {
-    //         showMoreInfo.style.display = "table-row";
-    //     } else {
-    //         showMoreInfo.style.display = "none";
-    //     }
-    // })
-
-    // lessInfo.forEach(lessInfoRow => {
-    //     lessInfoRow.addEventListener("click", function () {
-    //         const showMoreInfo = document.querySelector(".show-more-info");
-    //         if (showMoreInfo.style.display === "none") {
-    //             showMoreInfo.style.display = "table-row";
-    //         } else {
-    //             showMoreInfo.style.display = "none";
-    //         }
-
-    //     });
-    // });
     const lessInfo = document.querySelectorAll(".less-info");
     for (var i = 0; i < lessInfo.length; i++) {
         lessInfo[i].addEventListener("click", function () {
             const showMoreInfo = document.querySelector(".show-more-info");
             console.log("KLIKK");
             showMoreInfo.classList.toggle("show-row");
-
         });
     }
-
 }
