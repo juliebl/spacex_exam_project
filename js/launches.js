@@ -3,26 +3,26 @@ const seeUpcomingButton = document.querySelector(".see-upcoming");
 const seePreviousButton = document.querySelector(".see-previous");
 const seeAllButton = document.querySelector(".see-all");
 
-apiURL = "https://api.spacexdata.com/v3/launches/upcoming?limit=10&order=desc&sort=launch_date_local";
+apiURL = "https://api.spacexdata.com/v3/launches/upcoming?limit=10&order=desc&sort=launch_date_utc";
 fetchApi();
 
 // Press active button and change to relevant API
 seeUpcomingButton.addEventListener("click", function (event) {
     removeActiveButton();
     event.target.classList.add("active-button");
-    apiURL = "https://api.spacexdata.com/v3/launches/upcoming?limit=10&order=desc&sort=launch_date_local";
+    apiURL = "https://api.spacexdata.com/v3/launches/upcoming?limit=10&order=desc&sort=launch_date_utc";
     fetchApi();
 })
 seePreviousButton.addEventListener("click", function (event) {
     removeActiveButton();
     event.target.classList.add("active-button");
-    apiURL = "https://api.spacexdata.com/v3/launches/past?limit=10&order=desc&sort=launch_date_local";
+    apiURL = "https://api.spacexdata.com/v3/launches/past?limit=10&order=desc&sort=launch_date_utc";
     fetchApi();
 })
 seeAllButton.addEventListener("click", function (event) {
     removeActiveButton();
     event.target.classList.add("active-button");
-    apiURL = "https://api.spacexdata.com/v3/launches?limit=10&order=desc&sort=launch_date_local";
+    apiURL = "https://api.spacexdata.com/v3/launches?limit=10&order=desc&sort=launch_date_utc";
     fetchApi();
 })
 
@@ -98,9 +98,9 @@ function showLaunches(launch) {
         }
 
         // Shorten/ find date and time
-        const longDate = `${launch[i].launch_date_local}`;
+        const longDate = `${launch[i].launch_date_utc}`;
         const shortDate = longDate.slice(0, 10);
-        const longTime = `${launch[i].launch_date_local}`;
+        const longTime = `${launch[i].launch_date_utc}`;
         const shortTime = longTime.slice(11, 19);
 
         // Create HTML

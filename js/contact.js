@@ -23,9 +23,7 @@ form.addEventListener("submit", validateForm);
 function validateForm() {
     event.preventDefault();
 
-
     const nameValue = name.value;
-
     if (validateLength(nameValue, 2) === true) {
         nameError.style.display = "none";
         nameHasError = false;
@@ -34,9 +32,7 @@ function validateForm() {
         nameHasError = true;
     }
 
-
     const lastNameValue = lastName.value;
-
     if (validateLength(lastNameValue, 2) === true) {
         lastNameError.style.display = "none";
         lastNameHasError = false;
@@ -46,7 +42,6 @@ function validateForm() {
     }
 
     const messageValue = message.value;
-
     if (validateLength(messageValue, 10) === true) {
         messageError.style.display = "none";
         messageHasError = false;
@@ -56,7 +51,6 @@ function validateForm() {
     }
 
     const emailValue = email.value;
-
     if (validateEmail(emailValue)) {
         emailError.style.display = "none";
         emailHasError = false;

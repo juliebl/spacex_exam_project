@@ -52,6 +52,12 @@ tbody tr {
     cursor: pointer;
 }
 
+tbody tr:hover {
+    background-color: rgb(233, 232, 235);
+
+
+}
+
 .see-more-launches {
     text-align: center;
     background-color: rgb(209, 209, 209);
