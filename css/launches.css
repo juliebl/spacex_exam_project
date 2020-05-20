@@ -6,6 +6,29 @@ main {
     padding: 50px;
 }
 
+.launch-menu {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.launch-menu>* {
+    flex: 1;
+    min-width: 200px;
+    margin: 0;
+    padding: 15px 10px;
+    cursor: pointer;
+    background-color: rgb(90, 88, 95);
+}
+
+.launch-menu>*:active {
+    background-color: rgb(39, 37, 44);
+}
+
+.active-button {
+    background-color: rgb(39, 37, 44);
+}
+
 table {
     width: 100%;
     text-align: left;
@@ -15,7 +38,7 @@ table {
 
 tr td,
 tr th {
-    padding: 20px;
+    padding: 15px;
 }
 
 tr {
@@ -26,6 +49,12 @@ tr {
 
 tbody tr {
     background-color: rgb(241, 241, 241);
+    cursor: pointer;
+}
+
+.see-more-launches {
+    text-align: center;
+    background-color: rgb(209, 209, 209);
 }
 
 .loading {
@@ -301,11 +330,51 @@ iframe {
     .more-info-list div {
         flex-direction: column;
     }
+
+    .more-info h3 {
+        font-size: 2rem;
+    }
+
+    .more-info-list ul li {
+        margin-bottom: 10px;
+    }
 }
 
 @media screen and (max-width: 500px) {
 
     main {
         padding: 10px;
+    }
+
+    #launchDate {
+        width: 30%;
+    }
+
+    #mission {
+        width: 70%;
+    }
+
+    .more-info-list ul li {
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+
+    #launchDate {
+        width: 50%;
+    }
+
+    #mission {
+        width: 50%;
+    }
+
+    .more-info h2 {
+        font-size: 1.2rem;
+    }
+
+    .more-info h3 {
+        font-size: 1.4rem;
     }
 }

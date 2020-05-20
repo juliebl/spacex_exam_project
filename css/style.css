@@ -150,7 +150,7 @@ body {
 }
 
 .button:active {
-    background-color: rgb(224, 224, 224);
+    background-color: rgb(185, 185, 185);
     border: 2px solid rgb(224, 224, 224);
 }
 

@@ -1,20 +1,59 @@
-fetch("https://api.spacexdata.com/v3/launches?order=asc&limit=50&order_by=launch_date_local")
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (json) {
-        showLaunches(json);
-    })
-    .catch(function (error) {
-        console.log(error);
-    });
+// Make menu buttons active on click
+const seeUpcomingButton = document.querySelector(".see-upcoming");
+const seePreviousButton = document.querySelector(".see-previous");
+const seeAllButton = document.querySelector(".see-all");
+
+apiURL = "https://api.spacexdata.com/v3/launches/upcoming?limit=10&order=desc&sort=launch_date_local";
+fetchApi();
+
+// Press active button and change to relevant API
+seeUpcomingButton.addEventListener("click", function (event) {
+    removeActiveButton();
+    event.target.classList.add("active-button");
+    apiURL = "https://api.spacexdata.com/v3/launches/upcoming?limit=10&order=desc&sort=launch_date_local";
+    fetchApi();
+})
+seePreviousButton.addEventListener("click", function (event) {
+    removeActiveButton();
+    event.target.classList.add("active-button");
+    apiURL = "https://api.spacexdata.com/v3/launches/past?limit=10&order=desc&sort=launch_date_local";
+    fetchApi();
+})
+seeAllButton.addEventListener("click", function (event) {
+    removeActiveButton();
+    event.target.classList.add("active-button");
+    apiURL = "https://api.spacexdata.com/v3/launches?limit=10&order=desc&sort=launch_date_local";
+    fetchApi();
+})
+
+// Remove active class when pressing another button
+function removeActiveButton() {
+    if (document.querySelectorAll('.active-button').length > 0) {
+        document.querySelectorAll('.active-button').forEach(el => {
+            el.classList.remove('active-button');
+        })
+    }
+}
+// Fetch API
+function fetchApi() {
+    fetch(apiURL)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (json) {
+            showLaunches(json);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+}
+
 
 function showLaunches(launch) {
     const container = document.querySelector("tbody");
     let newHTML = "";
 
     for (var i = 0; i < launch.length; i++) {
-
         // Check if there is mission description
         let missionDetails = "";
         if (launch[i].details === null) {
@@ -26,7 +65,7 @@ function showLaunches(launch) {
         // Check if there is a flickr image
         let flickrImage = "";
         if (launch[i].links.flickr_images.length === 0) {
-            flickrImage = `<img src="../img/placeholder-image.png"><a href="https://www.flickr.com/photos/spacex/">See images on Flickr</a>`;
+            flickrImage = `<img src="img/placeholder-image.png"><a href="https://www.flickr.com/photos/spacex/">See images on Flickr</a>`;
         } else {
             flickrImage = `<img src="${launch[i].links.flickr_images[0]}" alt="">
             <a href="https://www.flickr.com/photos/spacex/">See more on Flickr</a>`;
@@ -110,8 +149,16 @@ function showLaunches(launch) {
   `;
         newHTML += launchDetails;
     }
-    container.innerHTML = newHTML;
+    // Load more launches
+    const loadMoreLaunch = `
+<tfoot><td class="see-more-launches button-dark" colspan="4">See more launches</td></tfoot>
+`
 
+    // Add new HTML to container
+    container.innerHTML = newHTML + loadMoreLaunch;
+
+
+    // Expand info about each launch
     const lessInfo = document.querySelectorAll(".less-info");
     for (var i = 0; i < lessInfo.length; i++) {
         lessInfo[i].addEventListener("click", function (event) {
@@ -131,7 +178,4 @@ function showLaunches(launch) {
         });
 
     }
-
-
-
 }
