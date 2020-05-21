@@ -106,9 +106,9 @@ function showLaunches(launch) {
             // Check if there is a flickr image
             let flickrImage = "";
             if (launch[i].links.flickr_images.length === 0) {
-                flickrImage = `<img src="img/placeholder-image.png" class="placeholder"><a href="https://www.flickr.com/photos/spacex/">See images on Flickr</a>`;
+                flickrImage = `<img src="img/placeholder_img_space.jpg" class="placeholder"><a href="https://www.flickr.com/photos/spacex/">See images on Flickr</a>`;
             } else {
-                flickrImage = `<img src="${launch[i].links.flickr_images[0]}" alt="">
+                flickrImage = `<a href="${launch[i].links.flickr_images[0]}"><img src="${launch[i].links.flickr_images[0]}" alt=""></a>
             <a href="https://www.flickr.com/photos/spacex/">See more on Flickr</a>`;
             }
 
@@ -129,7 +129,7 @@ function showLaunches(launch) {
             } else {
                 wikiLink = `${launch[i].links.wikipedia}`;
             }
-            // Check if there is a wikipedia link
+            // Check if there is a article link
             let articleLink = "";
             if (launch[i].links.article_link === null) {
                 articleLink = "";
@@ -191,8 +191,6 @@ function showLaunches(launch) {
         }
 
     }
-
-
 
     // Add new HTML to container
     container.innerHTML = newHTML;

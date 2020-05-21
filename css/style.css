@@ -191,6 +191,10 @@ h2 {
     margin: 0;
 }
 
+.shorten-text::after {
+    content: "...";
+}
+
 .small-text {
     margin: 0;
     font-size: 0.9rem;
@@ -277,7 +281,7 @@ footer p {
 /************ IMAGES / ICONS ************/
 
 .patch {
-    width: 20%;
+    width: 30%;
 }
 
 .center {
@@ -313,6 +317,9 @@ footer p {
 .info-cards img {
     max-width: 80%;
     margin: auto auto auto 0;
+    height: 350px;
+    object-fit: cover;
+
 }
 
 /*********** FOOTER ***********/
