@@ -49,6 +49,8 @@ function fetchApi() {
 }
 
 
+
+
 function showLaunches(launch) {
     const container = document.querySelector("tbody");
     let newHTML = "";
@@ -65,23 +67,22 @@ function showLaunches(launch) {
         // Check if there is a flickr image
         let flickrImage = "";
         if (launch[i].links.flickr_images.length === 0) {
-            flickrImage = `<img src="img/placeholder-image.png"><a href="https://www.flickr.com/photos/spacex/">See images on Flickr</a>`;
+            flickrImage = `<img src="img/placeholder-image.png" class="placeholder"><a href="https://www.flickr.com/photos/spacex/">See images on Flickr</a>`;
         } else {
             flickrImage = `<img src="${launch[i].links.flickr_images[0]}" alt="">
             <a href="https://www.flickr.com/photos/spacex/">See more on Flickr</a>`;
         }
 
         // Emed YouTube link
-        const videoURL = `${launch[i].links.video_link}`;
-        let videoID = videoURL.substr(32);
-        let youtubeLink = ("https://www.youtube.com/embed/" + videoID);
+        const videoID = `${launch[i].links.youtube_id}`;
         let youtubeVideo = "";
-        if (videoURL.length === 0) {
-            youtubeVideo = `<img src="../img/placeholder-image.png"><a href="">See more on youtube</a>`;
+        if (launch[i].links.youtube_id === null) {
+            youtubeVideo = `<img src="img/placeholder-image.png" class="placeholder"><a href="">See more on youtube</a>`;
         } else {
+            let youtubeLink = ("https://www.youtube.com/embed/" + videoID);
             youtubeVideo = `<iframe src="${youtubeLink}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><a href="">See more on youtube</a>`;
         }
-
+        console.log(videoID);
         // Check if there is a wikipedia link
         let wikiLink = "";
         if (launch[i].links.wikipedia === null) {

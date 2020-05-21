@@ -46,13 +46,16 @@ tr {
 
 }
 
-
 tbody tr {
     background-color: rgb(241, 241, 241);
+}
+
+.less-info {
+
     cursor: pointer;
 }
 
-tbody tr:hover {
+.less-info:hover {
     background-color: rgb(233, 232, 235);
 
 
@@ -61,6 +64,11 @@ tbody tr:hover {
 .see-more-launches {
     text-align: center;
     background-color: rgb(209, 209, 209);
+    cursor: pointer;
+}
+
+.see-more-launches:active {
+    background-color: rgb(39, 37, 44);
 }
 
 .loading {
@@ -151,11 +159,16 @@ tbody tr:hover {
 }
 
 .img img,
-.video {
+.video,
+.placeholder {
     max-width: 100%;
     margin: 0 0 10px 0;
     padding: 0;
     display: block;
+}
+
+.placeholder {
+    max-height: 468px !important;
 }
 
 iframe {
@@ -173,8 +186,13 @@ iframe {
     margin-bottom: -20px;
     padding: 30px 0 20px 0;
     cursor: pointer;
+    color: rgb(39, 37, 44);
 }
 
+.close-icon:hover {
+    background-color: rgba(241, 241, 241, 0);
+    color: rgb(128, 128, 128);
+}
 
 
 .more-info a {
@@ -287,8 +305,9 @@ iframe {
     }
 
     .img,
-    .video {
-        margin: 0 auto;
+    .video,
+    .placeholder {
+        margin: 0 auto 10px auto;
         text-align: center;
     }
 
