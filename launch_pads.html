@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceX microsite</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/small-header.css">
+    <link rel="stylesheet" href="css/launches.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/24fa93cdd3.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <section class="header" id="top">
+            <div class="fixed-top-bar">
+                <div class="top-bar" id="top-bar"><a href="index.html"><img src="img/logo.png" alt="SpaceX logo"
+                            class="logo"></a>
+                    <nav class="top-nav" id="top-nav">
+                        <ul>
+                            <li id="toggle-menu"><i class="fas fa-bars"></i></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="launches.html">Launches</a></li>
+                            <li><a href="launch_pads.html">Launch pads</a></li>
+                            <li><a href="rockets.html">Rockets</a></li>
+                            <li><a href="spacecrafts.html">Spacecrafts</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html" class="active">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="header-content">
+                <div class="header-content-main-text">
+                    <h1>Launch pads</h1>
+                    <p>Automatically updated launch schedule for previous and upcoming SpaceX launches.</p>
+                </div>
+                <div class="header-content-countdown">
+                    <p class="small-text">Time until next launch</p>
+                    <p class="countdown">23.04.05.05</p>
+                    <a href="" class="arrow-link">See more details <i class="fas fa-chevron-right arrow-right"></i></a>
+                </div>
+        </section>
+        <main>
+            <div class="launch-menu">
+                <p class="see-upcoming active-button button button-dark">Upcoming launches</p>
+                <p class="see-previous button button-dark">Previous launches</p>
+                <p class="see-all button button-dark">All launches</p>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col" id="launchDate">Launch date</th>
+                        <th scope="col" id="mission">Mission</th>
+                        <th scope="col" id="customer">Customer</th>
+                        <th scope="col" id="vehicle">Vehicle</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr class="loading">
+                        <td>Loading...</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="loading">
+                        <td>Loading...</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="loading">
+                        <td>Loading...</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="loading">
+                        <td>Loading...</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+
+                </tbody>
+                <tfoot>
+                    <td class="see-more-launches button-dark" colspan="4">See more launches</td>
+                </tfoot>
+            </table>
+        </main>
+        <footer>
+            <a href="#top" class="to-top-icon"><i class="fas fa-chevron-up center-icon"></i></a>
+            <nav class="footer-links">
+                <div>
+                    <h2>Sitemap:</h2>
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="launches.html">Launches</a></li>
+                        <li><a href="launch_pads.html">Launch pads</a></li>
+                        <li><a href="rockets.html">Rockets</a></li>
+                        <li><a href="spacecrafts.html">Spacecrafts</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>More info:</h2>
+                    <ul>
+                        <li><a href="https://www.spacex.com/">SpaceX</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/SpaceX">Wikipedia</a></li>
+                        <li><a href="https://www.nasa.gov/">NASA</a></li>
+                        <li><a href="https://www.reddit.com/r/spacex/">Reddit</a></li>
+                    </ul>
+                </div>
+                <div class="social-media-links">
+
+                    <ul>
+                        <li><a href="http://www.youtube.com/spacex"><i class="fab fa-youtube-square"></i></a></li>
+                        <li><a href="https://twitter.com/spacex"><i class="fab fa-twitter-square"></i></a></li>
+                        <li><a href="http://www.flickr.com/spacexphotos"><i class="fab fa-flickr"></i></a></li>
+                        <li><a href="http://www.instagram.com/spacex"><i class="fab fa-instagram-square"></i></a></li>
+                    </ul>
+                </div>
+            </nav>
+            <hr>
+            <p>This website is a first year exam project made by Julie Larsen in the Frond end development program at <a
+                    href="https://www.noroff.no/en/studies/vocational-school/front-end-development">Noroff School of
+                    technology and digital media</a> and is
+                not affiliated with SpaceX in any way.</p>
+        </footer>
+    </div>
+
+    <script src="js/launch_pads.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

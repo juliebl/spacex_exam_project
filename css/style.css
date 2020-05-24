@@ -36,7 +36,6 @@ body {
 
 /************ TOP NAVIGATION BAR ************/
 
-
 .top-bar {
     display: flex;
     flex-direction: row;
@@ -96,9 +95,44 @@ body {
 }
 
 
+/* COUNTDOWN */
+.countdown {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.small-text,
+.arrow-link {
+    display: none;
+}
+
 .header-content-countdown {
     text-align: right;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
 }
+
+.countdown-numbers div {
+    margin-right: 30px;
+}
+
+.countdown-numbers div:last-of-type {
+    margin-right: 0;
+}
+
+.countdown * {
+    display: inline-block;
+}
+
+.countdown span {
+    display: block;
+    margin-top: -15px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+
 
 /************ BUTTONS ************/
 .button {
@@ -185,6 +219,16 @@ h2 {
     text-transform: uppercase;
     margin: 0;
 }
+
+/* FADE IN.. FJERN? */
+/* .fade-in {
+    opacity: 1;
+    transition: opacity 2s ease;
+}
+
+.hidden {
+    opacity: 0;
+} */
 
 .date {
     font-size: 1.3rem;

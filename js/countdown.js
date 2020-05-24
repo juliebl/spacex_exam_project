@@ -1,30 +1,56 @@
-// fetch("https://api.spacexdata.com/v3/launches/next")
-//     .then(function (response) {
-//         return response.json();
-//     })
-//     .then(function (json) {
-//         countdownTimer(json);
-//     })
-//     .catch(function (error) {
-//         console.log(error);
-//     });
+ // Countdown timer based on https://www.educative.io/edpresso/how-to-create-a-countdown-timer-using-javascript
 
-// function countdownTimer(nextLaunch) {
-//     // const countdownContainer = document.querySelector(".countdown");
-//     console.log(new Date().getTime());
+ // Fetch API
+ fetch("https://api.spacexdata.com/v3/launches/next")
+     .then(function (response) {
+         return response.json();
+     })
+     .then(function (json) {
+         countdownTimer(json);
+     })
+     .catch(function (error) {
+         console.log(error);
+     });
 
-//     const countdown = setInterval(function () {
-//         const nextLaunchTime = nextLaunch.launch_date_unix;
-//         const currentTime = new Date().getTime();
+ function countdownTimer(nextLaunch) {
+     const nextLaunchTime = nextLaunch.launch_date_utc;
+     const countdownDate = new Date(nextLaunchTime).getTime();
+     document.querySelector(".countdown").style.color = "white";
+     // Run every second
+     setInterval(function () {
+         const timeNow = new Date().getTime();
+         const timeleft = countdownDate - timeNow;
 
-//         const timeleft = nextLaunchTime - currentTime;
-//         console.log(nextLaunchTime + " current time");
+         // Calculating the days, hours, minutes and seconds left
+         let days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+         let hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+         let minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+         let seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
 
-//         var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
-//         var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-//         var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
-//         var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
-//         console.log(`${days} days`);
-//     }, 1000)
+         // Add zero before if only one digit
+         if (days.toString().length < 2) {
+             days = ("0" + days);
+         }
+         if (hours.toString().length < 2) {
+             hours = ("0" + hours);
+         }
+         if (minutes.toString().length < 2) {
+             minutes = ("0" + minutes);
+         }
+         if (seconds.toString().length < 2) {
+             seconds = ("0" + seconds);
+         }
 
-// }
+         const countdownContainer = document.querySelector(".countdown");
+         countdownContainer.innerHTML = `
+         <div class="countdown-numbers"><div>${days}<span>Days</span></div><div>${hours}<span>Hours</span></div><div>${minutes}<span>Minutes</span></div><div>${seconds}<span>Seconds</span></div></div>`;
+     }, 1000);
+
+     setTimeout(function () {
+         document.querySelector(".small-text").style.display = "block";
+         document.querySelector(".arrow-link").style.display = "block";
+         document.querySelector(".header-content-countdown").style.opacity = "1";
+         document.querySelector(".header-content").style.opacity = "1";
+     }, 1000)
+
+ }

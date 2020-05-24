@@ -1,91 +1,19 @@
 // Fetch API
-function fetchApi() {
-    fetch(apiURL)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (json) {
-            showLaunches(json);
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
-}
 
-// See more button
-let limit = 10;
-
-function expandLaunchList() {
-    const seeMoreButton = document.querySelector(".see-more-launches");
-    seeMoreButton.addEventListener("click", function () {
-        limit += 10;
-        console.log(limit);
-        fetchApi();
+fetch(apiURL)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (json) {
+        showLaunchPads(json);
+    })
+    .catch(function (error) {
+        console.log(error);
     });
 
-}
+apiURL = "https://api.spacexdata.com/v3/launchpads";
 
-expandLaunchList();
-
-
-// Make menu buttons active on click
-const seeUpcomingButton = document.querySelector(".see-upcoming");
-const seePreviousButton = document.querySelector(".see-previous");
-const seeAllButton = document.querySelector(".see-all");
-
-apiURL = "https://api.spacexdata.com/v3/launches/upcoming?limit=" + limit + "&order=desc&sort=launch_date_utc";
-fetchApi();
-////////////// TRY TO SHORTEN CODE
-// function chooseAPI(state) {
-//     const buttonState = ("see" + state + "Button");
-//     buttonState.addEventListener("click", function (event) {
-//         removeActiveButton();
-//         // let limit = 10;
-//         event.target.classList.add("active-button");
-//         apiURL = "https://api.spacexdata.com/v3/launches/" + state + "?limit=" + limit + "&order=desc&sort=launch_date_utc";
-//         fetchApi();
-//     })
-// }
-// chooseAPI("Upcoming");
-// chooseAPI("Previous");
-// chooseAPI("All");
-
-// Press active button and change to relevant API
-seeUpcomingButton.addEventListener("click", function (event) {
-    removeActiveButton();
-    // let limit = 10;
-    event.target.classList.add("active-button");
-    apiURL = "https://api.spacexdata.com/v3/launches/upcoming?limit=" + limit + "&order=desc&sort=launch_date_utc";
-    fetchApi();
-})
-seePreviousButton.addEventListener("click", function (event) {
-    removeActiveButton();
-    // let limit = 10;
-    event.target.classList.add("active-button");
-    apiURL = "https://api.spacexdata.com/v3/launches/past?limit=" + limit + "&order=desc&sort=launch_date_utc";
-    fetchApi();
-})
-seeAllButton.addEventListener("click", function (event) {
-    removeActiveButton();
-    // let limit = 10;
-    event.target.classList.add("active-button");
-    apiURL = "https://api.spacexdata.com/v3/launches?limit=" + limit + "&order=desc&sort=launch_date_utc";
-    fetchApi();
-})
-
-// Remove active class when pressing another button
-function removeActiveButton() {
-    if (document.querySelectorAll('.active-button').length > 0) {
-        document.querySelectorAll('.active-button').forEach(el => {
-            el.classList.remove('active-button');
-        })
-    }
-}
-
-
-
-
-function showLaunches(launch) {
+function showLaunches(apiURL) {
     const container = document.querySelector("tbody");
     let newHTML = "";
     console.log("launches: " + launch.length);
@@ -93,7 +21,6 @@ function showLaunches(launch) {
 
     function launchLoop(launch) {
         for (var i = 0; i < launch.length; i++) {
-
 
             // Check if there is mission description
             let missionDetails = "";
