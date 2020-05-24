@@ -78,11 +78,14 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0 15%;
     min-height: 600px;
 }
+
+
 
 .header-content>div {
     width: 50%;
@@ -112,6 +115,8 @@ body {
     opacity: 0;
     transition: all 0.5s ease-in-out;
 }
+
+
 
 .countdown-numbers div {
     margin-right: 30px;
@@ -195,6 +200,9 @@ a {
     font-weight: 600;
 }
 
+.active {
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
 
 h1 {
     font-size: 5.5rem;
@@ -332,9 +340,14 @@ footer p {
     text-align: center;
 }
 
+.align-center {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
 .center-icon {
-    display: block !important;
-    text-align: center !important;
+
     font-size: 3rem;
     margin: 10px;
     color: rgba(255, 255, 255, 0.5);
@@ -372,6 +385,10 @@ footer {
     color: rgb(255, 255, 255);
 }
 
+footer .center-icon {
+    display: block;
+    text-align: center;
+}
 
 footer ul li {
     padding: 5px 0;
@@ -537,6 +554,37 @@ footer hr {
         background-position: left;
     }
 
+    .header-content {
+
+        justify-content: space-evenly;
+        text-align: center;
+    }
+
+    .header-content>div {
+        width: 80%;
+        margin: 50px;
+    }
+
+    .header-content-main-text {
+        margin-bottom: 20px;
+    }
+
+    .header-content-countdown {
+        text-align: center;
+    }
+
+    .countdown-numbers {
+        display: block !important;
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    .countdown span {
+
+        margin-top: 0;
+
+    }
+
     /** INFO CARDS / ROCKETS AND SPACECRAFTS **/
 
     .info-cards img {
@@ -570,24 +618,7 @@ footer hr {
 }
 
 @media screen and (max-width: 800px) {
-    .header-content {
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        text-align: center;
-    }
 
-    .header-content>div {
-        width: 80%;
-    }
-
-    .header-content-main-text {
-        margin-bottom: 20px;
-    }
-
-    .header-content-countdown {
-        text-align: center;
-    }
 
     h1,
     .countdown {
@@ -610,6 +641,11 @@ footer hr {
         font-size: 1.1rem;
     }
 
+    .header-content>div {
+        width: 100%;
+        margin: 50px 0 0;
+    }
+
     .info-cards img {
         max-width: 100%;
         margin-top: 20px;
@@ -626,6 +662,15 @@ footer hr {
     .info-cards p {
         margin: auto 0;
     }
+
+    .countdown-numbers div {
+        margin-right: 20px;
+    }
+
+    .countdown-numbers div:last-of-type {
+        margin-right: 0;
+    }
+
 }
 
 @media screen and (max-width: 500px) {

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/small-header.css">
     <link rel="stylesheet" href="css/launches.css">
+    <link rel="stylesheet" href="css/launch-pads.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300,400;0,600;0,700;1,400;1,600;1,700&display=swap"
         rel="stylesheet">
@@ -26,11 +27,11 @@
                             <li id="toggle-menu"><i class="fas fa-bars"></i></li>
                             <li><a href="index.html">Home</a></li>
                             <li><a href="launches.html">Launches</a></li>
-                            <li><a href="launch_pads.html">Launch pads</a></li>
+                            <li><a href="launch_pads.html" class="active">Launch pads</a></li>
                             <li><a href="rockets.html">Rockets</a></li>
                             <li><a href="spacecrafts.html">Spacecrafts</a></li>
                             <li><a href="about.html">About</a></li>
-                            <li><a href="contact.html" class="active">Contact</a></li>
+                            <li><a href="contact.html">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -38,61 +39,53 @@
             <div class="header-content">
                 <div class="header-content-main-text">
                     <h1>Launch pads</h1>
-                    <p>Automatically updated launch schedule for previous and upcoming SpaceX launches.</p>
+                    <p>An overview of all launch pads, both active and retired.</p>
                 </div>
                 <div class="header-content-countdown">
                     <p class="small-text">Time until next launch</p>
                     <p class="countdown">23.04.05.05</p>
                     <a href="" class="arrow-link">See more details <i class="fas fa-chevron-right arrow-right"></i></a>
                 </div>
+            </div>
         </section>
         <main>
-            <div class="launch-menu">
-                <p class="see-upcoming active-button button button-dark">Upcoming launches</p>
-                <p class="see-previous button button-dark">Previous launches</p>
-                <p class="see-all button button-dark">All launches</p>
-            </div>
+
             <table>
                 <thead>
                     <tr>
-                        <th scope="col" id="launchDate">Launch date</th>
-                        <th scope="col" id="mission">Mission</th>
-                        <th scope="col" id="customer">Customer</th>
-                        <th scope="col" id="vehicle">Vehicle</th>
+                        <th scope="col" id="siteName">Site name</th>
+                        <th scope="col" id="region">Region</th>
+                        <th scope="col" id="status">Status</th>
+
                     </tr>
                 </thead>
                 <tbody>
+                    <tr class="loading">
+                        <td>Loading...</td>
+                        <td></td>
+                        <td></td>
 
-                    <tr class="loading">
-                        <td>Loading...</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
                     </tr>
                     <tr class="loading">
                         <td>Loading...</td>
                         <td></td>
                         <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="loading">
-                        <td>Loading...</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="loading">
-                        <td>Loading...</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
 
+                    </tr>
+                    <tr class="loading">
+                        <td>Loading...</td>
+                        <td></td>
+                        <td></td>
 
+                    </tr>
+                    <tr class="loading">
+                        <td>Loading...</td>
+                        <td></td>
+                        <td></td>
+
+                    </tr>
                 </tbody>
-                <tfoot>
-                    <td class="see-more-launches button-dark" colspan="4">See more launches</td>
-                </tfoot>
+
             </table>
         </main>
         <footer>
@@ -136,10 +129,9 @@
                 not affiliated with SpaceX in any way.</p>
         </footer>
     </div>
-
-    <script src="js/launch_pads.js"></script>
     <script src="js/countdown.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/launch_pads.js"></script>
 </body>
 
 </html>

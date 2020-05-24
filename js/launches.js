@@ -88,7 +88,6 @@ function removeActiveButton() {
 function showLaunches(launch) {
     const container = document.querySelector("tbody");
     let newHTML = "";
-    console.log("launches: " + launch.length);
     launchLoop(launch);
 
     function launchLoop(launch) {

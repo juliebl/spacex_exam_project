@@ -351,6 +351,10 @@ h2 {
 }
 
 @media screen and (max-width: 600px) {
+    .next-launch h3 {
+        font-size: 2rem;
+    }
+
     .news-container {
         display: grid;
         grid-template-columns: 1fr;
