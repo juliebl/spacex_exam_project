@@ -1,10 +1,11 @@
 // Fetch API
-apiURL = "https://api.spacexdata.com/v3/launchpads?sort=status";
+apiURL = "https://api.spacexdata.com/v3/launchpads";
 fetch(apiURL)
     .then(function (response) {
         return response.json();
     })
     .then(function (json) {
+
         showLaunchPads(json);
     })
     .catch(function (error) {
@@ -12,6 +13,7 @@ fetch(apiURL)
     });
 
 function showLaunchPads(launchPad) {
+
     container = document.querySelector("tbody");
     let newHTML = "";
     for (var i = 0; i < launchPad.length; i++) {
