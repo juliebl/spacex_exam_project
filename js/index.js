@@ -134,7 +134,7 @@ function showLaunchPads(launchPad) {
     for (var i = 0; i < 3; i++) {
 
         const launchPadDetails = `<div class="triple-card">
-        <iframe  frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBVm2T6LbGNuBCTPR3fQPdQBaQdhpe3pkk&q=${launchPad[i].location.latitude},${launchPad[i].location.longitude}&zoom=8" allowfullscreen></iframe>
+        <iframe class="map" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBVm2T6LbGNuBCTPR3fQPdQBaQdhpe3pkk&q=${launchPad[i].location.latitude},${launchPad[i].location.longitude}&zoom=8" allowfullscreen></iframe>
         <h3>${launchPad[i].location.name}</h3>
         <p class="long-text">${launchPad[i].details}</p>
         <a href="launch_pads.html" class="arrow-link">Read more<i class="fas fa-chevron-right arrow-right"></i></a>
