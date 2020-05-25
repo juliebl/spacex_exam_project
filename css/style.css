@@ -14,14 +14,13 @@ body {
     margin: 0;
 }
 
-.single-info-card,
+
 .single-info-card {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
-    padding: 100px;
-    margin: 250px 15%;
     padding: 50px;
+    margin: 250px 15%;
     background-color: rgba(16, 16, 19, 0.9);
     color: rgb(255, 255, 255);
 }
@@ -105,8 +104,7 @@ body {
     justify-content: flex-end;
 }
 
-.small-text,
-.arrow-link {
+.small-text {
     display: none;
 }
 
