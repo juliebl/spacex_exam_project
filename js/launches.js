@@ -174,10 +174,10 @@ function showLaunches(launch) {
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="date-time">
+                                <div class="slash">
                                     <p>Local launch date/time</p>
-                                    <p class="date">${shortDate}</p>
-                                    <p class="time">${shortTime}</p>
+                                    <p class="left-slash">${shortDate}</p>
+                                    <p class="right-slash">${shortTime}</p>
                                 </div>
                                 <div class="img">${flickrImage}
                                 </div> <div class="video">${youtubeVideo}</div>

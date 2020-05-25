@@ -5,6 +5,8 @@ body {
 
 main {
     min-height: 100px;
+    margin: 150px 15%;
+    padding: 50px;
 }
 
 .header {

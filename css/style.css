@@ -195,7 +195,7 @@ body {
 a {
     text-decoration: none;
     color: rgb(255, 255, 255);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .active {
@@ -226,16 +226,6 @@ h2 {
     margin: 0;
 }
 
-/* FADE IN.. FJERN? */
-/* .fade-in {
-    opacity: 1;
-    transition: opacity 2s ease;
-}
-
-.hidden {
-    opacity: 0;
-} */
-
 .date {
     font-size: 1.3rem;
     margin: 0;
@@ -254,6 +244,7 @@ h2 {
     color: white;
     text-decoration: none;
     text-transform: uppercase;
+    font-weight: 600;
 }
 
 .top-nav ul li a:hover {
@@ -375,6 +366,20 @@ footer p {
     height: 350px;
     object-fit: cover;
 
+}
+
+/************ OTHER ************/
+/* FADE IN.. FJERN? */
+/* .fade-in {
+    opacity: 1;
+    transition: opacity 2s ease;
+}
+
+.hidden {
+    opacity: 0;
+} */
+.full-width {
+    width: 100%;
 }
 
 /*********** FOOTER ***********/

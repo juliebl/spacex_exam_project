@@ -38,10 +38,6 @@
     font-style: italic;
 }
 
-.map {
-    width: 100%;
-}
-
 @media screen and (max-width: 1100px) {
 
     .more-info-main>div {

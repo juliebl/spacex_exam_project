@@ -1,7 +1,6 @@
 main {
     background-color: white;
-    margin: 150px 15%;
-    padding: 50px;
+
 }
 
 .launch-menu {
@@ -41,7 +40,6 @@ tr th {
 
 tr {
     border: 4px solid white;
-
 }
 
 tbody tr {
@@ -49,14 +47,11 @@ tbody tr {
 }
 
 .less-info {
-
     cursor: pointer;
 }
 
 .less-info:hover {
     background-color: rgb(233, 232, 235);
-
-
 }
 
 .see-more-launches {
@@ -137,7 +132,7 @@ tbody tr {
     grid-area: list;
 }
 
-.date-time {
+.slash {
     grid-area: date;
     text-align: right;
 }
@@ -256,27 +251,36 @@ iframe {
     font-weight: 700;
 }
 
+/* for some reason there is no space between the slash 
+and right-text when inside this ul, so this is a fix for that*/
+.more-info-list ul li .right-slash {
+    margin-left: 5px;
+}
 
-
-.date-time {
+.slash {
     margin: auto 0 20px 0;
 }
 
-.date-time>* {
+.slash>* {
     margin: 0;
 }
 
-.date,
-.time {
+.left-slash,
+.right-slash {
     display: inline-block;
     font-size: 1.3rem;
 }
 
-.time {
+.left-slash {
     font-weight: 600;
 }
 
-.date::after {
+/* Overrides ul li style */
+.right-slash {
+    font-weight: 400 !important;
+}
+
+.left-slash::after {
     content: " / ";
 }
 
@@ -285,8 +289,6 @@ iframe {
     main {
         margin: 125px 5% 0 5%;
     }
-
-
 
 }
 
@@ -301,7 +303,7 @@ iframe {
     }
 
     h4,
-    .date-time {
+    .slash {
         text-align: center;
     }
 

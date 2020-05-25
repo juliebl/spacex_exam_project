@@ -33,6 +33,8 @@ function showLaunchPads(launchPad) {
         //     }
         // }
         // vehiclesLaunched();
+
+
         const launchPadDetails = `<tr class="less-info">
         <td>${launchPad[i].location.name}</td>
         <td>${launchPad[i].location.region}</td>
@@ -54,10 +56,11 @@ function showLaunchPads(launchPad) {
                                         <li><span>Successful launches:</span><span>${launchPad[i].successful_launches} / ${launchPad[i].attempted_launches}</span> </li>
                                         <li><span>Vehicles launched:</span><span>${launchPad[i].successful_launches} / ${launchPad[i].attempted_launches}</span> </li>
                                         </ul>
+
                                     </div>
                                 </div>
                                 <a href="${wikiLink}" class="wiki-link">Read more on Wikipedia</a> </div>  
-                                    <iframe class="patch map" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBVm2T6LbGNuBCTPR3fQPdQBaQdhpe3pkk&q=${launchPad[i].location.latitude},${launchPad[i].location.longitude}&zoom=8" allowfullscreen></iframe>
+                                    <iframe class="patch full-width" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBVm2T6LbGNuBCTPR3fQPdQBaQdhpe3pkk&q=${launchPad[i].location.latitude},${launchPad[i].location.longitude}&zoom=8" allowfullscreen></iframe>
                                     </div>
 
                                 </div>
@@ -71,9 +74,10 @@ function showLaunchPads(launchPad) {
 
         newHTML += launchPadDetails;
     }
+
     container.innerHTML = newHTML;
 
-    // Expand info about each launch
+    // Expand info about each launch pad
     const lessInfo = document.querySelectorAll(".less-info");
     for (var i = 0; i < lessInfo.length; i++) {
         lessInfo[i].addEventListener("click", function (event) {
