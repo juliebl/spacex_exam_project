@@ -151,7 +151,7 @@ function showLaunches(launch) {
 
             // Create HTML
             const launchDetails = `<tr class="less-info header-row">
-        <td>${shortDate}</td>
+        <td class="short-date">${shortDate}</td>
         <td>${launch[i].mission_name}</td>
         <td>${launch[i].rocket.second_stage.payloads[0].customers[0]}</td>
         <td>${launch[i].rocket.rocket_name}</td>

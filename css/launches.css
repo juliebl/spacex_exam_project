@@ -33,14 +33,26 @@ table {
     padding: 20px;
 }
 
+#launchDate {
+    width: 15%;
+}
+
+#mission {
+    width: 40%;
+}
+
+#customer {
+    width: 30%;
+}
+
+#vehicle {
+    width: 15%;
+}
+
 tr td,
 tr th {
     padding: 15px;
 }
-
-/* .header-row {
-    display: none;
-} */
 
 tr {
     border: 4px solid white;
@@ -395,11 +407,15 @@ and right-text when inside this ul, so this is a fix for that*/
 @media screen and (max-width: 400px) {
 
     #launchDate {
-        width: 50%;
+        width: 35%;
+    }
+
+    .header-row {
+        font-size: 0.9rem;
     }
 
     #mission {
-        width: 50%;
+        width: 55%;
     }
 
     .more-info h2 {
