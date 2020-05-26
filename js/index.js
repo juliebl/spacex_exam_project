@@ -45,26 +45,26 @@ function showNextLaunch(launch) {
 }
 
 // LATEST LAUNCH IMAGE 
-fetch("https://api.spacexdata.com/v3/launches/latest")
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (json) {
-        changeLatestImg(json);
-    })
-    .catch(function (error) {
-        console.log(error);
-    });
+// fetch("https://api.spacexdata.com/v3/launches/latest")
+//     .then(function (response) {
+//         return response.json();
+//     })
+//     .then(function (json) {
+//         changeLatestImg(json);
+//     })
+//     .catch(function (error) {
+//         console.log(error);
+//     });
 
-function changeLatestImg(latestLaunch) {
-    const latestImg = document.querySelector(".latest-launch img");
-    // Check if there is a flickr image
-    if (latestLaunch.links.flickr_images.length === 0) {
-        latestImg.src = "img/placeholder-image.png";
-    } else {
-        latestImg.src = latestLaunch.links.flickr_images[0];
-    }
-}
+// function changeLatestImg(latestLaunch) {
+//     const latestImg = document.querySelector(".latest-launch img");
+//     // Check if there is a flickr image
+//     if (latestLaunch.links.flickr_images.length === 0) {
+//         latestImg.src = "img/placeholder-image.png";
+//     } else {
+//         latestImg.src = latestLaunch.links.flickr_images[0];
+//     }
+// }
 
 /////////////////////// PREVIOUS LAUNCHES ///////////////////////
 fetch("https://api.spacexdata.com/v3/launches/past?limit=3&order=desc")

@@ -214,6 +214,11 @@ iframe {
     justify-content: space-evenly;
 }
 
+
+footer h2 {
+    margin-bottom: 0;
+}
+
 /*********** RESPONSIVE ***********/
 @media screen and (max-width: 1700px) {
     .next-launch {
