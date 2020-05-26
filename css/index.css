@@ -24,7 +24,7 @@ body {
 .latest,
 .previous-launches,
 .launch-pads {
-    margin: 250px 15%;
+    margin: 250px 10%;
     padding: 50px;
     background-color: rgba(16, 16, 19, 0.9);
     color: rgb(255, 255, 255);
@@ -166,7 +166,7 @@ iframe {
 .triple-card-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
+    grid-gap: 50px;
 }
 
 .triple-card {

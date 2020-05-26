@@ -19,11 +19,12 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
-    padding: 50px;
-    margin: 250px 15%;
+    padding: 150px 100px;
+    margin: 250px 10%;
     background-color: rgba(16, 16, 19, 0.9);
     color: rgb(255, 255, 255);
 }
+
 
 
 .info-card-content {
@@ -80,7 +81,7 @@ body {
     flex-wrap: wrap;
     align-items: center;
     min-height: 100vh;
-    margin: 0 15%;
+    margin: auto 15%;
     min-height: 600px;
 }
 
@@ -300,7 +301,7 @@ footer a:active {
 }
 
 .social-media-links i {
-    font-size: 4rem;
+    font-size: 3rem;
     margin: 0;
     padding: 0;
 }
