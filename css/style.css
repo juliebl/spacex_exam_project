@@ -319,6 +319,12 @@ footer p {
     font-size: 0.8rem;
 }
 
+.non-clickable-link {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: line-through;
+}
+
 /************ IMAGES / ICONS ************/
 
 .patch {

@@ -21,10 +21,12 @@ function showLaunchPads(launchPad) {
         // Check if there is a wikipedia link
         let wikiLink = "";
         if (launchPad[i].wikipedia === null) {
-            wikiLink = "";
+            wikiLink = `<a href="" class="wiki-link non-clickable-link">Read more on Wikipedia</a>`;
+
         } else {
-            wikiLink = `${launchPad[i].wikipedia}`;
+            wikiLink = `<a href="${launchPad[i].wikipedia}" class="wiki-link">Read more on Wikipedia</a>`;
         }
+
 
         // function vehiclesLaunched() {
         //     for (i = 0; i < launchPad[i].vehicles_launched.length; i++) {
@@ -59,7 +61,7 @@ function showLaunchPads(launchPad) {
 
                                     </div>
                                 </div>
-                                <a href="${wikiLink}" class="wiki-link">Read more on Wikipedia</a> </div>  
+                                ${wikiLink} </div>  
                                     <iframe class="patch full-width" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBVm2T6LbGNuBCTPR3fQPdQBaQdhpe3pkk&q=${launchPad[i].location.latitude},${launchPad[i].location.longitude}&zoom=8" allowfullscreen></iframe>
                                     </div>
 

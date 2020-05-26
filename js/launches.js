@@ -124,16 +124,19 @@ function showLaunches(launch) {
             // Check if there is a wikipedia link
             let wikiLink = "";
             if (launch[i].links.wikipedia === null) {
-                wikiLink = "";
+                wikiLink = `<a href="" class="wiki-link non-clickable-link">Wikipedia</a>`;
+
             } else {
-                wikiLink = `${launch[i].links.wikipedia}`;
+                wikiLink = `<a href="${launch[i].links.wikipedia}" class="wiki-link">Wikipedia</a>`;
             }
+
             // Check if there is a article link
             let articleLink = "";
             if (launch[i].links.article_link === null) {
-                articleLink = "";
+                articleLink = `<a href="" class="article-link non-clickable-link">Article</a> `;
             } else {
-                articleLink = `${launch[i].links.article_link}`;
+                articleLink = `
+                <a href="${launch[i].links.article_link}" class="article-link">Article</a> `;
             }
 
             // Shorten / find date and time
@@ -156,7 +159,7 @@ function showLaunches(launch) {
                                     <h2>Mission name:</h2>
                                     <h3>${launch[i].mission_name}</h3>
                                     <p>${missionDetails}</p>
-                                    <a href="${articleLink}" class="article-link">Article</a><a href="${wikiLink}" class="wiki-link">Wikipedia</a>
+                                    ${articleLink}${wikiLink}
                                 </div>
                                 <img class="patch" src="${launch[i].links.mission_patch}" alt="">
                                 <div class="more-info-list">

@@ -13,7 +13,6 @@ fetch(apiURL)
     });
 
 function showRockets(rocket) {
-
     container = document.querySelector("tbody");
     let newHTML = "";
     for (var i = 0; i < rocket.length; i++) {
@@ -25,12 +24,21 @@ function showRockets(rocket) {
             flickrImage = `<a href="${rocket[i].flickr_images[0]}"><img src="${rocket[i].flickr_images[0]}" class="full-width" alt=""></a><a href="https://www.flickr.com/photos/spacex/">See images on Flickr</a>
             `;
         }
+
         // Check if there is a wikipedia link
         let wikiLink = "";
         if (rocket[i].wikipedia === null) {
-            wikiLink = "";
+            wikiLink = `<a href="" class="wiki-link non-clickable-link">Read more on Wikipedia</a>`;
+
         } else {
-            wikiLink = `${rocket[i].wikipedia}`;
+            wikiLink = `<a href="${rocket[i].wikipedia}" class="wiki-link">Read more on Wikipedia</a>`;
+        }
+        // If successrate is 0
+        let successRate = "";
+        if (rocket[i].success_rate_pct === 0) {
+            successRate = `<span>${rocket[i].success_rate_pct}% (May not have been launched yet)</span>`;
+        } else {
+            successRate = `<span>${rocket[i].success_rate_pct}%</span>`;
         }
 
         let status = "";
@@ -62,12 +70,12 @@ function showRockets(rocket) {
                                         <li><span>Mass:</span><span class="left-slash">${rocket[i].mass.kg + " "}kg</span><span class="right-slash">${rocket[i].mass.lb  + " "}lb</span></li>
                                         </ul>
                                         <ul>
-                                        <li><span>Success rate:</span><span>${rocket[i].success_rate_pct}%</span></li>
+                                        <li><span>Success rate:</span>${successRate}</li>
                                         <li><span>First flight:</span><span>${rocket[i].first_flight}</span></li>
                                         </ul>
                                     </div>
                                 </div>
-                                <a href="${wikiLink}" class="wiki-link">Read more on Wikipedia</a> </div>  
+                                ${wikiLink}</div>  
                                 <div class="img">${flickrImage}</div>
                                     </div>
 
