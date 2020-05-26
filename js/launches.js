@@ -124,7 +124,7 @@ function showLaunches(launch) {
                 youtubeVideo = `<img src="img/placeholder_img_video.jpg" alt="No video found" class="placeholder"><a href="">See more on youtube</a>`;
             } else {
                 let youtubeLink = ("https://www.youtube.com/embed/" + videoID);
-                youtubeVideo = `<iframe src="${youtubeLink}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><a href="">See more on youtube</a>`;
+                youtubeVideo = `<iframe src="${youtubeLink}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="Youtube video for ${launch[i].mission_name}" allowfullscreen></iframe><a href="">See more on youtube</a>`;
             }
 
             // Check if there is a wikipedia link
