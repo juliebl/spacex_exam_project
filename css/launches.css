@@ -38,6 +38,10 @@ tr th {
     padding: 15px;
 }
 
+/* .header-row {
+    display: none;
+} */
+
 tr {
     border: 4px solid white;
 }

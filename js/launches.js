@@ -12,20 +12,30 @@ function fetchApi() {
         });
 }
 
-// See more button
+// Press "See more launches" button to load 10 more launches from the API
+expandLaunchList();
 let limit = 10;
+let state = "";
+
+apiURL = "https://api.spacexdata.com/v3/launches/upcoming?limit=" + limit + "&order=asc&sort=launch_date_utc";
+fetchApi();
 
 function expandLaunchList() {
     const seeMoreButton = document.querySelector(".see-more-launches");
+
     seeMoreButton.addEventListener("click", function () {
         limit += 10;
-        console.log(limit);
+
+        if (state === "upcoming") {
+            apiURL = "https://api.spacexdata.com/v3/launches/upcoming?limit=" + limit + "&order=desc&sort=launch_date_utc";
+        } else if (state === "past") {
+            apiURL = "https://api.spacexdata.com/v3/launches/past?limit=" + limit + "&order=desc&sort=launch_date_utc";
+        } else {
+            apiURL = "https://api.spacexdata.com/v3/launches?limit=" + limit + "&order=desc&sort=launch_date_utc";
+        }
         fetchApi();
     });
-
 }
-
-expandLaunchList();
 
 
 // Make menu buttons active on click
@@ -33,51 +43,39 @@ const seeUpcomingButton = document.querySelector(".see-upcoming");
 const seePreviousButton = document.querySelector(".see-previous");
 const seeAllButton = document.querySelector(".see-all");
 
-apiURL = "https://api.spacexdata.com/v3/launches/upcoming?limit=" + limit + "&order=desc&sort=launch_date_utc";
-fetchApi();
-////////////// TRY TO SHORTEN CODE
-// function chooseAPI(state) {
-//     const buttonState = ("see" + state + "Button");
-//     buttonState.addEventListener("click", function (event) {
-//         removeActiveButton();
-//         // let limit = 10;
-//         event.target.classList.add("active-button");
-//         apiURL = "https://api.spacexdata.com/v3/launches/" + state + "?limit=" + limit + "&order=desc&sort=launch_date_utc";
-//         fetchApi();
-//     })
-// }
-// chooseAPI("Upcoming");
-// chooseAPI("Previous");
-// chooseAPI("All");
 
 // Press active button and change to relevant API
 seeUpcomingButton.addEventListener("click", function (event) {
     removeActiveButton();
-    // let limit = 10;
+    limit = 10;
+    state = "upcoming";
     event.target.classList.add("active-button");
-    apiURL = "https://api.spacexdata.com/v3/launches/upcoming?limit=" + limit + "&order=desc&sort=launch_date_utc";
+    apiURL = "https://api.spacexdata.com/v3/launches/upcoming?limit=" + limit + "&order=asc&sort=launch_date_utc";
     fetchApi();
 })
 seePreviousButton.addEventListener("click", function (event) {
     removeActiveButton();
-    // let limit = 10;
+    limit = 10;
+    state = "past";
     event.target.classList.add("active-button");
     apiURL = "https://api.spacexdata.com/v3/launches/past?limit=" + limit + "&order=desc&sort=launch_date_utc";
     fetchApi();
 })
 seeAllButton.addEventListener("click", function (event) {
     removeActiveButton();
-    // let limit = 10;
+    limit = 10;
+    state = "all"
     event.target.classList.add("active-button");
     apiURL = "https://api.spacexdata.com/v3/launches?limit=" + limit + "&order=desc&sort=launch_date_utc";
     fetchApi();
 })
 
+
 // Remove active class when pressing another button
 function removeActiveButton() {
     if (document.querySelectorAll('.active-button').length > 0) {
-        document.querySelectorAll('.active-button').forEach(el => {
-            el.classList.remove('active-button');
+        document.querySelectorAll('.active-button').forEach(button => {
+            button.classList.remove('active-button');
         })
     }
 }
@@ -152,7 +150,7 @@ function showLaunches(launch) {
             const shortTime = longTime.slice(11, 19);
 
             // Create HTML
-            const launchDetails = `<tr class="less-info">
+            const launchDetails = `<tr class="less-info header-row">
         <td>${shortDate}</td>
         <td>${launch[i].mission_name}</td>
         <td>${launch[i].rocket.second_stage.payloads[0].customers[0]}</td>
@@ -206,6 +204,7 @@ function showLaunches(launch) {
 
     // Expand info about each launch
     const lessInfo = document.querySelectorAll(".less-info");
+
     for (var i = 0; i < lessInfo.length; i++) {
         lessInfo[i].addEventListener("click", function (event) {
             const target = event.currentTarget
@@ -224,6 +223,4 @@ function showLaunches(launch) {
         });
 
     }
-
-
 }
