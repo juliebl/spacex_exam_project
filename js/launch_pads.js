@@ -62,7 +62,7 @@ function showLaunchPads(launchPad) {
                                     </div>
                                 </div>
                                 ${wikiLink} </div>  
-                                    <iframe class="patch full-width" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBVm2T6LbGNuBCTPR3fQPdQBaQdhpe3pkk&q=${launchPad[i].location.latitude},${launchPad[i].location.longitude}&zoom=8" allowfullscreen></iframe>
+                                    <iframe class="patch full-width" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBVm2T6LbGNuBCTPR3fQPdQBaQdhpe3pkk&q=${launchPad[i].location.latitude},${launchPad[i].location.longitude}&zoom=8" title="Map showing position for ${launchPad[i].site_name_long} launch site" allowfullscreen></iframe>
                                     </div>
 
                                 </div>
