@@ -109,7 +109,7 @@ function showLaunches(launch) {
             // Check if there is a mission patch
             let missionPatch = "";
             if (launch[i].links.mission_patch === null) {
-                missionPatch = `<img class="patch" src="/img/placeholder_patch.png" alt="Mission patch for ${launch[i].mission_name} not found">`
+                missionPatch = `<img class="patch" src="img/placeholder_patch.png" alt="Mission patch for ${launch[i].mission_name} not found">`
 
             } else {
                 missionPatch = `<img class="patch" src="${launch[i].links.mission_patch}" alt="Mission patch for ${launch[i].mission_name}">`;
