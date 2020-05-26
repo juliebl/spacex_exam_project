@@ -95,7 +95,7 @@ function showPrevLaunches(launch) {
         // Check if there is a flickr image, if not use image from unsplash
         let flickrImage = "";
         if (launch[i].links.flickr_images.length === 0) {
-            flickrImage = launch[i].links.mission_patch;
+            flickrImage = "img/placeholder_img_space.jpg";
         } else {
             flickrImage = launch[i].links.flickr_images[0];
         }

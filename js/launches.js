@@ -82,9 +82,6 @@ function removeActiveButton() {
     }
 }
 
-
-
-
 function showLaunches(launch) {
     const container = document.querySelector("tbody");
     let newHTML = "";
@@ -105,17 +102,26 @@ function showLaunches(launch) {
             // Check if there is a flickr image
             let flickrImage = "";
             if (launch[i].links.flickr_images.length === 0) {
-                flickrImage = `<img src="img/placeholder_img_space.jpg" class="placeholder"><a href="https://www.flickr.com/photos/spacex/">See images on Flickr</a>`;
+                flickrImage = `<img src="img/placeholder_img_space.jpg" class="placeholder" alt="Galaxy with the text no image found"><a href="https://www.flickr.com/photos/spacex/">See images on Flickr</a>`;
+
             } else {
-                flickrImage = `<a href="${launch[i].links.flickr_images[0]}"><img src="${launch[i].links.flickr_images[0]}" alt=""></a>
+                flickrImage = `<a href="${launch[i].links.flickr_images[0]}"><img src="${launch[i].links.flickr_images[0]}" alt="${launch[i].mission_name}"></a>
             <a href="https://www.flickr.com/photos/spacex/">See more on Flickr</a>`;
+            }
+            // Check if there is a mission patch
+            let missionPatch = "";
+            if (launch[i].links.mission_patch === null) {
+                missionPatch = `<img class="patch" src="/img/placeholder_patch.png" alt="Mission patch for ${launch[i].mission_name} not found">`
+
+            } else {
+                missionPatch = `<img class="patch" src="${launch[i].links.mission_patch}" alt="Mission patch for ${launch[i].mission_name}">`;
             }
 
             // Emed YouTube link
             const videoID = `${launch[i].links.youtube_id}`;
             let youtubeVideo = "";
             if (launch[i].links.youtube_id === null) {
-                youtubeVideo = `<img src="img/placeholder_img_video.jpg" class="placeholder"><a href="">See more on youtube</a>`;
+                youtubeVideo = `<img src="img/placeholder_img_video.jpg" alt="No video found" class="placeholder"><a href="">See more on youtube</a>`;
             } else {
                 let youtubeLink = ("https://www.youtube.com/embed/" + videoID);
                 youtubeVideo = `<iframe src="${youtubeLink}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><a href="">See more on youtube</a>`;
@@ -161,7 +167,7 @@ function showLaunches(launch) {
                                     <p>${missionDetails}</p>
                                     ${articleLink}${wikiLink}
                                 </div>
-                                <img class="patch" src="${launch[i].links.mission_patch}" alt="">
+                                ${missionPatch}
                                 <div class="more-info-list">
                                     <h4>Payload:</h4>
                                     <div>

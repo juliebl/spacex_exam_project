@@ -19,9 +19,9 @@ function showRockets(rocket) {
         // Check if there is a flickr image
         let flickrImage = "";
         if (rocket[i].flickr_images.length === 0) {
-            flickrImage = `<img src="img/placeholder_img_space.jpg" class="placeholder full-width">`;
+            flickrImage = `<img src="img/placeholder_img_space.jpg" class="placeholder full-width" alt="alt="Galaxy with the text no image found"">`;
         } else {
-            flickrImage = `<a href="${rocket[i].flickr_images[0]}"><img src="${rocket[i].flickr_images[0]}" class="full-width" alt=""></a><a href="https://www.flickr.com/photos/spacex/">See images on Flickr</a>
+            flickrImage = `<a href="${rocket[i].flickr_images[0]}"><img src="${rocket[i].flickr_images[0]}" class="full-width" alt="${rocket[i].rocket_name}"></a><a href="https://www.flickr.com/photos/spacex/">See images on Flickr</a>
             `;
         }
 
