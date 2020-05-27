@@ -84,7 +84,6 @@ function showPrevLaunches(launch) {
                 <img src="${flickrImage}" alt="${launch[i].mission_name}">
                 <h3>${launch[i].mission_name}</h3>
                 <p class="long-text">${missionDetails}</p>
-                <a href="" class="arrow-link">Read more <i class="fas fa-chevron-right arrow-right"></i></a>
             </div>
       `;
         newPrevLaunchHTML += prevLaunchDetails;
@@ -116,7 +115,6 @@ function showLaunchPads(launchPad) {
         <iframe class="map" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBVm2T6LbGNuBCTPR3fQPdQBaQdhpe3pkk&q=${launchPad[i].location.latitude},${launchPad[i].location.longitude}&zoom=8" title="Map showing position for ${launchPad[i].location.name}" allowfullscreen></iframe>
         <h3>${launchPad[i].location.name}</h3>
         <p class="long-text">${launchPad[i].details}</p>
-        <a href="launch_pads.html" class="arrow-link">Read more<i class="fas fa-chevron-right arrow-right"></i></a>
     </div>
   `;
         newHTML += launchPadDetails;
