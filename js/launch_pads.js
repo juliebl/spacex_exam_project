@@ -84,8 +84,8 @@ function showLaunchPads(launchPad) {
     for (var i = 0; i < lessInfo.length; i++) {
         lessInfo[i].addEventListener("click", function (event) {
             const target = event.currentTarget
-            if (target.classList.contains('close-icon')) {
-                const rowParent = target.closest('.show-more-info.show-row')
+            if (target.classList.contains("close-icon")) {
+                const rowParent = target.closest(".show-more-info.show-row")
                 if (rowParent) {
                     rowParent.classList.toggle("show-row");
                 }
