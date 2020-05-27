@@ -15,15 +15,12 @@ main {
     margin: 0;
     padding: 15px 10px;
     cursor: pointer;
-    background-color: rgb(90, 88, 95);
+    background-color: var(--grey);
 }
 
-.launch-menu>*:active {
-    background-color: rgb(39, 37, 44);
-}
-
+.launch-menu>*:active,
 .active-button {
-    background-color: rgb(39, 37, 44);
+    background-color: var(--dark-grey);
 }
 
 table {
@@ -59,7 +56,7 @@ tr {
 }
 
 tbody tr {
-    background-color: rgb(241, 241, 241);
+    background-color: var(--light-grey);
 }
 
 .less-info {
@@ -67,17 +64,17 @@ tbody tr {
 }
 
 .less-info:hover {
-    background-color: rgb(233, 232, 235);
+    background-color: var(--light-grey-darker);
 }
 
 .see-more-launches {
     text-align: center;
-    background-color: rgb(209, 209, 209);
+    background-color: var(--off-white);
     cursor: pointer;
 }
 
 .see-more-launches:active {
-    background-color: rgb(39, 37, 44);
+    background-color: var(--grey-darkest);
 }
 
 .loading {
@@ -86,7 +83,7 @@ tbody tr {
 
 @keyframes loading {
     0% {
-        background-color: rgb(241, 241, 241);
+        background-color: var(--light-grey);
     }
 
     50% {
@@ -94,7 +91,7 @@ tbody tr {
     }
 
     100% {
-        background-color: rgb(241, 241, 241);
+        background-color: var(--light-grey);
     }
 }
 
@@ -198,12 +195,12 @@ iframe {
     margin-bottom: -20px;
     padding: 30px 0 20px 0;
     cursor: pointer;
-    color: rgb(39, 37, 44);
+    color: var(--grey-darkest);
 }
 
 .close-icon:hover {
     background-color: rgba(241, 241, 241, 0);
-    color: rgb(128, 128, 128);
+    color: var(--grey-darker);
 }
 
 

@@ -26,7 +26,7 @@ body {
 .launch-pads {
     margin: 250px 10%;
     padding: 50px;
-    background-color: rgba(16, 16, 19, 0.9);
+    background-color: var(--dark-opacity);
     color: rgb(255, 255, 255);
 }
 

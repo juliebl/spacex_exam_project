@@ -27,7 +27,7 @@ main {
 }
 
 #contactForm {
-    background-color: rgba(16, 16, 19, 0.9);
+    background-color: var(--dark-opacity);
     padding: 5%;
     width: 600px;
     margin: 100px auto;
@@ -40,7 +40,7 @@ main {
 
 .error {
     display: none;
-    color: rgb(255, 130, 130);
+    color: var(--error-red);
     font-size: 14px;
     float: right;
 }

@@ -1,3 +1,14 @@
+:root {
+    --dark-opacity: rgba(16, 16, 19, 0.9);
+    --error-red: rgb(255, 130, 130);
+    --light-grey: rgb(241, 241, 241);
+    --light-grey-darker: rgb(233, 232, 235);
+    --grey: rgb(90, 88, 95);
+    --dark-grey: rgb(39, 37, 44);
+    --off-white: rgb(209, 209, 209);
+    --grey-darkest: rgb(39, 37, 44);
+}
+
 html,
 body {
     margin: 0;
@@ -21,7 +32,7 @@ body {
     grid-gap: 10px;
     padding: 150px 100px;
     margin: 250px 10%;
-    background-color: rgba(16, 16, 19, 0.9);
+    background-color: var(--dark-opacity);
     color: rgb(255, 255, 255);
 }
 
