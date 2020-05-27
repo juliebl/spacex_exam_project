@@ -145,6 +145,11 @@ footer h2 {
     margin-bottom: 0;
 }
 
+/*********** VIDEO ***********/
+.latest-video iframe {
+    height: 100vh;
+}
+
 /*********** RESPONSIVE ***********/
 @media screen and (max-width: 1700px) {
     .next-launch {
