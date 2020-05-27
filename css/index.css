@@ -141,17 +141,6 @@ iframe {
     padding: 25px 0;
 }
 
-/*********** LATEST VIDEO ***********/
-.latest-video {
-    text-align: center;
-}
-
-.latest-video iframe {
-    width: 100%;
-    height: 100vh;
-}
-
-
 footer h2 {
     margin-bottom: 0;
 }
@@ -160,10 +149,6 @@ footer h2 {
 @media screen and (max-width: 1700px) {
     .next-launch {
         margin: 125px 10%;
-    }
-
-    .launch-pads {
-        margin: 125px 10% 0 10%;
     }
 
     .previous-launches,
@@ -179,12 +164,9 @@ footer h2 {
         margin: 125px 5%;
     }
 
-    .launch-pads {
-        margin: 125px 5% 0 5%;
-    }
-
     .previous-launches,
-    .launch-pads {
+    .launch-pads,
+    .single-info-card {
         margin: 75px 0;
     }
 
@@ -240,6 +222,10 @@ footer h2 {
     .next-launch h3,
     .next-launch .date {
         text-align: center;
+    }
+
+    .single-info-card {
+        padding: 50px;
     }
 
     .patch {
