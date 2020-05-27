@@ -96,8 +96,6 @@ body {
     min-height: 600px;
 }
 
-
-
 .header-content>div {
     width: 50%;
 }
@@ -126,8 +124,6 @@ body {
     transition: all 0.5s ease-in-out;
 }
 
-
-
 .countdown-numbers div {
     margin-right: 30px;
 }
@@ -146,8 +142,6 @@ body {
     text-align: center;
     font-size: 0.9rem;
 }
-
-
 
 /************ BUTTONS ************/
 .button {
@@ -212,6 +206,10 @@ a {
 
 .active {
     border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.arrow-link:hover {
+    text-decoration: underline;
 }
 
 h1 {
@@ -290,7 +288,6 @@ footer h2 {
     font-weight: 600;
 }
 
-
 footer a {
     color: rgb(255, 255, 255);
     text-decoration: underline;
@@ -354,7 +351,6 @@ footer p {
 }
 
 .center-icon {
-
     font-size: 3rem;
     margin: 10px;
     color: rgba(255, 255, 255, 0.5);
@@ -383,19 +379,9 @@ footer p {
     margin: auto auto auto 0;
     height: 350px;
     object-fit: cover;
-
 }
 
 /************ OTHER ************/
-/* FADE IN.. FJERN? */
-/* .fade-in {
-    opacity: 1;
-    transition: opacity 2s ease;
-}
-
-.hidden {
-    opacity: 0;
-} */
 .full-width {
     width: 100%;
 }
@@ -603,7 +589,6 @@ footer hr {
     .countdown span {
 
         margin-top: 0;
-
     }
 
     /** INFO CARDS / ROCKETS AND SPACECRAFTS **/
@@ -639,7 +624,6 @@ footer hr {
 }
 
 @media screen and (max-width: 800px) {
-
 
     h1,
     .countdown {
