@@ -12,16 +12,10 @@ body {
     padding: 250px 0;
 }
 
-.launch-pads,
-.latest-social-media {
+.launch-pads {
     margin: 125px 15% 0 15%;
 }
 
-.latest-social-media {
-    margin-bottom: 125px;
-}
-
-.latest,
 .previous-launches,
 .launch-pads {
     margin: 250px 10%;
@@ -32,7 +26,6 @@ body {
 
 /************ TEXT ************/
 
-
 .next-launch h3 {
     letter-spacing: 3px;
 }
@@ -41,18 +34,8 @@ body {
     margin: 0;
 }
 
-.latest-social-media h2 {
-    text-align: center;
-    color: rgb(255, 255, 255);
-}
-
-.news-item p:last-of-type::after,
 .previous-launches-card p:last-of-type::after {
     content: "...";
-}
-
-.news-item p {
-    margin: 10px 0;
 }
 
 h2 {
@@ -84,13 +67,6 @@ iframe {
     height: 350px;
     object-fit: cover;
     object-position: 0 70%;
-}
-
-.latest-launch img {
-    width: 100%;
-    height: 550px;
-    object-fit: cover;
-    object-position: 0 50%;
 }
 
 /*********** NEXT LAUNCH ***********/
@@ -125,37 +101,6 @@ iframe {
     font-weight: 700;
 }
 
-
-
-/*********** LATEST ***********/
-.latest-bkg {
-    background: url(../img/bkg.jpg) fixed;
-    padding: 25px 0;
-}
-
-.latest {
-    display: flex;
-}
-
-
-.latest>div:first-of-type {
-    margin-right: 100px;
-}
-
-.latest-launch {
-    display: flex;
-    flex-direction: column;
-}
-
-.latest-launch a {
-    margin-top: 20px;
-}
-
-.news-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 60px;
-}
 
 /*********** TRIPLE CARDS / PREVIOUS LAUNCHES / LAUNCH PADS ***********/
 .previous-launches-and-launch-pads-bkg {
@@ -206,14 +151,6 @@ iframe {
     height: 100vh;
 }
 
-/*********** LATEST SOCIAL MEDIA ***********/
-
-.latest-media-embed {
-    margin-top: 45px;
-    display: flex;
-    justify-content: space-evenly;
-}
-
 
 footer h2 {
     margin-bottom: 0;
@@ -222,51 +159,35 @@ footer h2 {
 /*********** RESPONSIVE ***********/
 @media screen and (max-width: 1700px) {
     .next-launch {
-        margin: 0 10%;
+        margin: 125px 10%;
     }
 
-
-    .launch-pads,
-    .latest-social-media {
+    .launch-pads {
         margin: 125px 10% 0 10%;
     }
 
-    .latest,
     .previous-launches,
     .launch-pads,
     .single-info-card {
         margin: 200px 10%;
     }
 
-    .news-container {
-        grid-gap: 40px;
-    }
-
-    .latest>div:first-of-type {
-        margin-right: 50px;
-    }
 }
 
 @media screen and (max-width: 1300px) {
     .next-launch {
-        margin: 0 5%;
+        margin: 125px 5%;
     }
 
-    .launch-pads,
-    .latest-social-media {
+    .launch-pads {
         margin: 125px 5% 0 5%;
     }
 
-    .latest,
     .previous-launches,
     .launch-pads {
         margin: 75px 0;
     }
 
-    .news-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
 }
 
 @media screen and (max-width: 1110px) {
@@ -284,27 +205,6 @@ footer h2 {
         width: 30%;
     }
 
-    /** LATEST **/
-    .latest img {
-        width: 90%;
-    }
-
-    .latest>div:first-of-type {
-        margin-right: 0;
-    }
-
-    .latest-news {
-        margin-top: 20px;
-    }
-
-    .news-container {
-        grid-template-columns: 1fr;
-    }
-
-    .news-item:nth-last-child(-n+2) {
-        display: none;
-    }
-
     /** TRIPLE CARDS **/
     .triple-card-container {
         grid-template-columns: 1fr 1fr;
@@ -318,8 +218,6 @@ footer h2 {
     .triple-card img {
         width: 100%;
     }
-
-
 }
 
 @media screen and (max-width: 800px) {
@@ -344,47 +242,22 @@ footer h2 {
         text-align: center;
     }
 
-    .latest {
-        flex-wrap: wrap;
-    }
-
-    .latest h2 {
-        text-align: center;
-    }
-
-    .latest-launch img {
-        width: 100%;
-    }
-
-    .news-container {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .news-item:nth-last-child(-n+2) {
-        display: block;
-    }
-
     .patch {
         width: 150px;
         margin: 0 auto 40px auto;
         height: auto;
     }
 
+    .triple-card img,
+    iframe {
+        height: 300px;
+    }
 
 }
 
 @media screen and (max-width: 600px) {
     .next-launch h3 {
         font-size: 2rem;
-    }
-
-    .news-container {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-
-    .news-item:nth-last-child(-n+2) {
-        display: none;
     }
 
     .triple-card-container {
